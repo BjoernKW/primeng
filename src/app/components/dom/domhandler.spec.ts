@@ -4,11 +4,11 @@ describe('DomHandler', () => {
 
     it('should add single and multiple class to element', () => {
         const element = document.createElement("div");
-        DomHandler.addClass(element,"primeng");
+        DomHandler.addClass(element,"primeng-11");
         let mockElement = {classList:undefined,className:""};
-        DomHandler.addClass(mockElement,"primeng");
-        expect(element.classList).toContain("primeng");
-        expect(mockElement.className).toContain("primeng");
+        DomHandler.addClass(mockElement,"primeng-11");
+        expect(element.classList).toContain("primeng-11");
+        expect(mockElement.className).toContain("primeng-11");
         DomHandler.addMultipleClasses(element,"rocks! vamos!");
         DomHandler.addMultipleClasses(mockElement,"rocks! vamos!");
         expect(element.classList.value).toContain("primeng rocks! vamos!");
@@ -17,22 +17,22 @@ describe('DomHandler', () => {
 
     it('should remove class from element', () => {
         const element = document.createElement("div");
-        DomHandler.addClass(element,"primeng");
+        DomHandler.addClass(element,"primeng-11");
         let mockElement = {classList:undefined,className:""};
-        DomHandler.addClass(mockElement,"primeng");
-        DomHandler.removeClass(element,"primeng");
-        DomHandler.removeClass(mockElement,"primeng");
-        expect(element.classList).not.toContain("primeng");
-        expect(mockElement.className).not.toContain("primeng");
+        DomHandler.addClass(mockElement,"primeng-11");
+        DomHandler.removeClass(element,"primeng-11");
+        DomHandler.removeClass(mockElement,"primeng-11");
+        expect(element.classList).not.toContain("primeng-11");
+        expect(mockElement.className).not.toContain("primeng-11");
     });
 
     it('should check elemets class', () => {
         const element = document.createElement("div");
-        DomHandler.addClass(element,"primeng");
+        DomHandler.addClass(element,"primeng-11");
         let mockElement = {classList:undefined,className:""};
-        DomHandler.addClass(mockElement,"primeng");
-        expect(DomHandler.hasClass(element,"primeng")).toBeTruthy();
-        expect(DomHandler.hasClass(mockElement,"primeng")).toBeTruthy();
+        DomHandler.addClass(mockElement,"primeng-11");
+        expect(DomHandler.hasClass(element,"primeng-11")).toBeTruthy();
+        expect(DomHandler.hasClass(mockElement,"primeng-11")).toBeTruthy();
     });
 
     it('should get siblings', () => {
@@ -79,8 +79,8 @@ describe('DomHandler', () => {
         const childEl = document.createElement("p");
         const childEl2 = document.createElement("a");
         const childEl3 = document.createElement("a");
-        DomHandler.addClass(childEl,"primeng");
-        DomHandler.addClass(childEl3,"primeng");
+        DomHandler.addClass(childEl,"primeng-11");
+        DomHandler.addClass(childEl3,"primeng-11");
         element.appendChild(childEl);
         element.appendChild(childEl2);
         element.appendChild(childEl3);
@@ -94,8 +94,8 @@ describe('DomHandler', () => {
         const childEl = document.createElement("p");
         const childEl2 = document.createElement("a");
         const childEl3 = document.createElement("a");
-        DomHandler.addClass(childEl,"primeng");
-        DomHandler.addClass(childEl3,"primeng");
+        DomHandler.addClass(childEl,"primeng-11");
+        DomHandler.addClass(childEl3,"primeng-11");
         element.appendChild(childEl);
         element.appendChild(childEl2);
         element.appendChild(childEl3);
@@ -109,8 +109,8 @@ describe('DomHandler', () => {
         const childEl3 = document.createElement("a");
         childEl2.setAttribute("height","300px");
         childEl3.setAttribute("height","300px");
-        DomHandler.addClass(childEl,"primeng");
-        DomHandler.addClass(childEl3,"primeng");
+        DomHandler.addClass(childEl,"primeng-11");
+        DomHandler.addClass(childEl3,"primeng-11");
         element.appendChild(childEl);
         element.appendChild(childEl2);
         element.appendChild(childEl3);
@@ -122,10 +122,10 @@ describe('DomHandler', () => {
         const childEl = document.createElement("p");
         const childEl2 = document.createElement("a");
         const childEl3 = document.createElement("a");
-        childEl2.setAttribute("primeng","rocks!");
-        childEl3.setAttribute("primeng","rocks!");
-        DomHandler.addClass(childEl,"primeng");
-        DomHandler.addClass(childEl3,"primeng");
+        childEl2.setAttribute("primeng-11","rocks!");
+        childEl3.setAttribute("primeng-11","rocks!");
+        DomHandler.addClass(childEl,"primeng-11");
+        DomHandler.addClass(childEl3,"primeng-11");
         element.style.height = "200px";
         element.style.width = "200px";
         childEl3.style.height = "100px";
@@ -143,10 +143,10 @@ describe('DomHandler', () => {
         const childEl = document.createElement("p");
         const childEl2 = document.createElement("a");
         const childEl3 = document.createElement("a");
-        childEl2.setAttribute("primeng","rocks!");
-        childEl3.setAttribute("primeng","rocks!");
-        DomHandler.addClass(childEl,"primeng");
-        DomHandler.addClass(childEl3,"primeng");
+        childEl2.setAttribute("primeng-11","rocks!");
+        childEl3.setAttribute("primeng-11","rocks!");
+        DomHandler.addClass(childEl,"primeng-11");
+        DomHandler.addClass(childEl3,"primeng-11");
         element.style.height = "200px";
         element.style.width = "200px";
         childEl3.style.height = "100px";

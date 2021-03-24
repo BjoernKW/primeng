@@ -55,9 +55,9 @@ describe('FileUpload', () => {
     it('should change style, styleClass, chooseLabel, uploadLabel, cancelLabel, showUploadButton and showCancelButton (advanced)', () => {
         fileupload.style = {'height': '300px'};
         fileupload.styleClass = "Primeng ROCKS!";
-        fileupload.chooseLabel = "primeng";
-        fileupload.uploadLabel = "primeng";
-        fileupload.cancelLabel = "primeng";
+        fileupload.chooseLabel = "primeng-11";
+        fileupload.uploadLabel = "primeng-11";
+        fileupload.cancelLabel = "primeng-11";
         fixture.detectChanges();
 
         const fileuploadEl = fixture.debugElement.query(By.css('div'));
@@ -69,9 +69,9 @@ describe('FileUpload', () => {
         expect(fileuploadEl.nativeElement.style.height).toContain("300px");
         expect(uploadButton).toBeTruthy();
         expect(cancelButton).toBeTruthy();
-        expect(uploadButton.nativeElement.textContent).toEqual("primeng");
-        expect(cancelButton.nativeElement.textContent).toEqual("primeng");
-        expect(chooseButton.nativeElement.textContent).toEqual("primeng");
+        expect(uploadButton.nativeElement.textContent).toEqual("primeng-11");
+        expect(cancelButton.nativeElement.textContent).toEqual("primeng-11");
+        expect(chooseButton.nativeElement.textContent).toEqual("primeng-11");
     });
 
     it('should call onFileSelect (advanced)', () => {

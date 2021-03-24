@@ -33,8 +33,7 @@ export class TableExportDemo implements OnInit {
     exportPdf() {
         import("jspdf").then(jsPDF => {
             import("jspdf-autotable").then(x => {
-                const doc = new jsPDF.default(0,0);
-                doc.autoTable(this.exportColumns, this.products);
+                const doc = new jsPDF.default('p', 'pt');
                 doc.save('products.pdf');
             })
         })

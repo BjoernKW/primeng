@@ -115,9 +115,9 @@ describe('PanelMenu', () => {
 				{ separator: true },
 				{ label: 'Quit', icon: 'pi pi-fw pi-times' }
 				],
-				title: "primeng",
-				target: "primeng",
-				url: "primeng",
+				title: "primeng-11",
+				target: "primeng-11",
+				url: "primeng-11",
 			}
 		];
 		fixture.detectChanges();
@@ -186,25 +186,25 @@ describe('PanelMenu', () => {
 				items: [{
 					label: 'New',
 					icon: 'Primeng ROCKS!',
-					title: "primeng",
-					target: "primeng",
-					url: "primeng",
+					title: "primeng-11",
+					target: "primeng-11",
+					url: "primeng-11",
 					disabled: true
 				},
 				{
 					label: 'Open',
 					icon: 'Primeng ROCKS!',
-					title: "primeng",
-					target: "primeng",
-					url: "primeng",
+					title: "primeng-11",
+					target: "primeng-11",
+					url: "primeng-11",
 					disabled: true
 				},
 				{
 					label: 'Quit',
 					icon: 'Primeng ROCKS!',
-					title: "primeng",
-					target: "primeng",
-					url: "primeng",
+					title: "primeng-11",
+					target: "primeng-11",
+					url: "primeng-11",
 					disabled: true
 				}
 				],

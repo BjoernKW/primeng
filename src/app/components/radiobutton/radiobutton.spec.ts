@@ -23,7 +23,7 @@ describe('RadioButton', () => {
     });
 
     it('should change name inputId value style styleClass label labelStyleClass and tabIndex', () => {
-        radiobutton.name = "primeng";
+        radiobutton.name = "primeng-11";
         radiobutton.inputId = "prime"
         radiobutton.value = "Primeng";
         radiobutton.style = {'height': '300px'};
@@ -36,7 +36,7 @@ describe('RadioButton', () => {
         const radiobuttonEl = fixture.debugElement.query(By.css('div'));
         const inputEl = fixture.debugElement.query(By.css('input'));
         const labelEl = fixture.debugElement.query(By.css('label'));
-        expect(inputEl.nativeElement.name).toEqual("primeng");
+        expect(inputEl.nativeElement.name).toEqual("primeng-11");
         expect(inputEl.nativeElement.value).toEqual("Primeng");
         expect(inputEl.nativeElement.id).toEqual("prime");
         expect(inputEl.nativeElement.tabIndex).toEqual(13);
@@ -89,7 +89,7 @@ describe('RadioButton', () => {
 
     it('should click checkbox', () => {
         fixture.detectChanges();
-        
+
         let value;
         radiobutton.onClick.subscribe(event => value = 5);
         const handleClickSpy = spyOn(radiobutton,'handleClick').and.callThrough();
@@ -113,7 +113,7 @@ describe('RadioButton', () => {
     it('should click label', () => {
         radiobutton.label = "prime"
         fixture.detectChanges();
-        
+
         let value;
         radiobutton.onClick.subscribe(event => value = 5);
         const handleClickSpy = spyOn(radiobutton,'handleClick').and.callThrough();
@@ -143,11 +143,11 @@ describe('RadioButton', () => {
         radiobutton.label = "prime";
         radiobutton.value = "prime";
         fixture.detectChanges();
-        
+
         const writeValueSpy = spyOn(radiobutton,'writeValue').and.callThrough();
         radiobutton.writeValue("prime");
         fixture.detectChanges();
-        
+
         expect(writeValueSpy).toHaveBeenCalled();
         expect(radiobutton.checked).toEqual(true);
     });

@@ -16,7 +16,7 @@
           }
         }
       },
-      "primeng": {
+      "primeng-11": {
         "projectType": "application",
         "schematics": {
           "@schematics/angular:component": {
@@ -137,5 +137,5 @@
         }
       }
     },
-    "defaultProject": "primeng"
+    "defaultProject": "primeng-11"
   }

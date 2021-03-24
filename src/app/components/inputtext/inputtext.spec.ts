@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
   })
   class TestInputTextComponent {
   }
-  
+
 describe('InputText', () => {
-  
+
     let inputtext: InputText;
     let fixture: ComponentFixture<TestInputTextComponent>;
 
@@ -32,7 +32,7 @@ describe('InputText', () => {
 
     it('should display by default', () => {
         fixture.detectChanges();
-  
+
         const inputEl = fixture.debugElement.query(By.css('input'));
         expect(inputEl.nativeElement).toBeTruthy();
         expect(inputEl.nativeElement.className).toContain("p-inputtext");
@@ -42,9 +42,9 @@ describe('InputText', () => {
 
     it('should call updateFilledState', () => {
         fixture.detectChanges();
-  
+
         const inputEl = fixture.debugElement.query(By.css('input'));
-        inputEl.nativeElement.value = "primeng";
+        inputEl.nativeElement.value = "primeng-11";
         inputEl.nativeElement.dispatchEvent(new Event("input"));
         fixture.detectChanges();
 
