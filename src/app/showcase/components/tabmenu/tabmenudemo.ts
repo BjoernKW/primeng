@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
-import {MenuItem} from 'primeng/api';
+import {MenuItem} from 'primeng-11/api';
 
 @Component({
     templateUrl: './tabmenudemo.html'
 })
 export class TabMenuDemo {
-    
+
     items: MenuItem[];
 
     activeItem: MenuItem;

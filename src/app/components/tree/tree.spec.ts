@@ -2,10 +2,10 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { Tree, UITreeNode } from './tree';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { ContextMenu, ContextMenuSub } from 'primeng/contextmenu';
+import { ContextMenu, ContextMenuSub } from 'primeng-11/contextmenu';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { ContextMenuService, TreeDragDropService } from 'primeng/api';
+import { ContextMenuService, TreeDragDropService } from 'primeng-11/api';
 import { first } from 'rxjs/operators';
 
 @Component({
@@ -24,7 +24,7 @@ import { first } from 'rxjs/operators';
 	filesTree7: any;
 
 	filesTree8: any;
-	
+
 	filesTree9: any;
 
 	items: any;
@@ -77,7 +77,7 @@ import { first } from 'rxjs/operators';
 					}]
 			}
 		];
-	
+
 		this.filesTree8 = [
 			{
 				label: "Backup",
@@ -86,7 +86,7 @@ import { first } from 'rxjs/operators';
 				collapsedIcon: "pi pi-folder"
 			}
 		];
-		
+
 		this.filesTree9 = [
 			{
 				label: "Storage",
@@ -95,13 +95,13 @@ import { first } from 'rxjs/operators';
 				collapsedIcon: "pi pi-folder"
 			}
 		];
-	
+
 		this.items = [
 			{label: 'View', icon: 'pi pi-search'},
 			{label: 'Unselect', icon: 'pi pi-close'}
 		];
 	}
-	
+
   }
 
 describe('Tree', () => {
@@ -191,14 +191,14 @@ describe('Tree', () => {
 
 	it('should created', () => {
 		fixture.detectChanges();
-  
+
 		const treeEl = fixture.debugElement.query(By.css('.p-tree'));
 		expect(treeEl.nativeElement).toBeTruthy();
 	});
-	  
+
 	it('should call toggle and expand clicked row', () => {
 		fixture.detectChanges();
-  
+
 		const toggleEls = fixture.debugElement.queryAll(By.css('.p-tree-toggler'));
 		const documentsToggleEl = toggleEls[0];
 		const treeNodes = fixture.debugElement.queryAll(By.css("p-treeNode"));
@@ -214,7 +214,7 @@ describe('Tree', () => {
 
 	it('should call toggle and collapse clicked row', () => {
 		fixture.detectChanges();
-  
+
 		const toggleEls = fixture.debugElement.queryAll(By.css('.p-tree-toggler'));
 		const documentsToggleEl = toggleEls[0];
 		const treeNodes = fixture.debugElement.queryAll(By.css("p-treeNode"));
@@ -233,7 +233,7 @@ describe('Tree', () => {
 
 	it('should expand&collapse with right and left key', () => {
 		fixture.detectChanges();
-		
+
 		const contentEls = fixture.debugElement.queryAll(By.css('.p-treenode-content'));
 		const treeNodes = fixture.debugElement.queryAll(By.css("p-treeNode"));
 		const documentsNode = treeNodes[0].componentInstance as UITreeNode;
@@ -259,7 +259,7 @@ describe('Tree', () => {
 	it('should select single and unselect with metakey', () => {
 		tree.selectionMode = 'single';
 		fixture.detectChanges();
-		
+
 		let selectedNode;
 		tree.selectionChange.subscribe((node)=>{
 			selectedNode = node;
@@ -279,12 +279,12 @@ describe('Tree', () => {
 		expect(selectedNode).toBeNull();
 	});
 
-	
+
 	it('should select single and unselect without metakey', () => {
 		tree.selectionMode = 'single';
 		tree.metaKeySelection = false;
 		fixture.detectChanges();
-		
+
 		const contentEls = fixture.debugElement.queryAll(By.css(".p-treenode-content"));
 		const documentsContentEl = contentEls[0];
 		const onNodeClickSpy = spyOn(tree,"onNodeClick").and.callThrough();
@@ -302,7 +302,7 @@ describe('Tree', () => {
 	it('should select multiple and unselect with metakey', () => {
 		tree.selectionMode = 'multiple';
 		fixture.detectChanges();
-		
+
 		let selectedNode;
 		tree.selectionChange.subscribe((node)=>{
 			selectedNode = node;
@@ -329,12 +329,12 @@ describe('Tree', () => {
 		expect(selectedNode).toEqual([]);
 	});
 
-	
+
 	it('should select multiple and unselect without metakey', () => {
 		tree.selectionMode = 'multiple';
 		tree.metaKeySelection = false;
 		fixture.detectChanges();
-		
+
 		const contentEls = fixture.debugElement.queryAll(By.css(".p-treenode-content"));
 		const documentsContentEl = contentEls[0];
 		const picturesContentEl = contentEls[1];
@@ -360,7 +360,7 @@ describe('Tree', () => {
 	it('should select with checkbox with propagateDown and propagateUp', () => {
 		tree.selectionMode = 'checkbox';
 		fixture.detectChanges();
-		
+
 		let toggleEls = fixture.debugElement.queryAll(By.css('.p-tree-toggler'));
 		const documentsToggleEl = toggleEls[0];
 		documentsToggleEl.nativeElement.click();
@@ -372,7 +372,7 @@ describe('Tree', () => {
 		workContentEl.nativeElement.click();
 		homeContentEl.nativeElement.click();
 		fixture.detectChanges();
-		
+
 		expect(tree.selection.length).toEqual(6);
 		workContentEl.nativeElement.click();
 		fixture.detectChanges();
@@ -407,7 +407,7 @@ describe('Tree', () => {
 		tree.contextMenu = testComponent.cm;
 		tree.selectionMode = 'single';
 		fixture.detectChanges();
-		
+
 		let selectedNode;
 		tree.selectionChange.subscribe(node =>{ selectedNode = node });
 		const contentEls = fixture.debugElement.queryAll(By.css(".p-treenode-content"));
@@ -447,7 +447,7 @@ describe('Tree', () => {
 		const onDropSpy = spyOn(server2Tree,"onDrop").and.callThrough();
 		documentsContentEl.triggerEventHandler("dragstart",{dataTransfer:new DataTransfer});
 		fixture.detectChanges();
-		
+
 		expect(onDragStartSpy).toHaveBeenCalled();
 		expect(startDragSpy).toHaveBeenCalled();
 		expect(documentsContentEl.componentInstance).toEqual(filesTree.dragNodeTree);
@@ -495,7 +495,7 @@ describe('Tree', () => {
 		const startDragSpy = spyOn(filesTree.dragDropService,"startDrag").and.callThrough();
 		documentsContentEl.triggerEventHandler("dragstart",{dataTransfer:new DataTransfer});
 		fixture.detectChanges();
-		
+
 		expect(onDragStartSpy).toHaveBeenCalled();
 		expect(startDragSpy).toHaveBeenCalled();
 		expect(documentsContentEl.componentInstance).toEqual(filesTree.dragNodeTree);
@@ -547,7 +547,7 @@ describe('Tree', () => {
 		const onDropSpy = spyOn(server2Tree,"onDrop").and.callThrough();
 		documentsContentEl.triggerEventHandler("dragstart",{dataTransfer:new DataTransfer});
 		fixture.detectChanges();
-		
+
 		expect(onDragStartSpy).toHaveBeenCalled();
 		expect(startDragSpy).toHaveBeenCalled();
 		expect(documentsContentEl.componentInstance).toEqual(filesTree.dragNodeTree);

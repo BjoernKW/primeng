@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
-import {MenuItem, MessageService} from 'primeng/api';
+import {MenuItem, MessageService} from 'primeng-11/api';
 
 @Component({
     templateUrl: './menudemo.html',
     providers: [MessageService]
 })
 export class MenuDemo {
-    
+
     items: MenuItem[];
 
     constructor(private messageService: MessageService) {}

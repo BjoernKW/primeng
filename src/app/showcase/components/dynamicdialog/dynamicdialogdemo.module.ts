@@ -4,10 +4,10 @@ import {DynamicDialogModule} from '../../../components/dynamicdialog/dynamicdial
 import {ProductListDemo} from './productlistdemo';
 import {DynamicDialogDemo} from './dynamicdialogdemo';
 import {DynamicDialogDemoRoutingModule} from './dynamicdialogdemo-routing.module';
-import {ToastModule} from 'primeng/toast';
-import {TableModule} from 'primeng/table';
-import {ButtonModule} from 'primeng/button';
-import {TabViewModule} from 'primeng/tabview';
+import {ToastModule} from 'primeng-11/toast';
+import {TableModule} from 'primeng-11/table';
+import {ButtonModule} from 'primeng-11/button';
+import {TabViewModule} from 'primeng-11/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

@@ -5,7 +5,7 @@
     </div>
 </div>
 
-<div class="content-section implementation">    
+<div class="content-section implementation">
     <div class="card">
         <img #img src="assets/showcase/images/demo/nature/nature3.jpg" alt="Logo" aria-haspopup="true">
         <p-contextMenu [target]="img" [model]="items"></p-contextMenu>
@@ -17,8 +17,8 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;ContextMenuModule&#125; from 'primeng/contextmenu';
-import &#123;MenuItem&#125; from 'primeng/api';
+import &#123;ContextMenuModule&#125; from 'primeng-11/contextmenu';
+import &#123;MenuItem&#125; from 'primeng-11/api';
 </app-code>
 
             <h5>MenuModel API</h5>
@@ -39,7 +39,7 @@ import &#123;MenuItem&#125; from 'primeng/api';
 </app-code>
 
             <h5>Exclusive Integrations</h5>
-            <p>Some components like Table require special attention so they provide a different method to attach a context menu. Refer to 
+            <p>Some components like Table require special attention so they provide a different method to attach a context menu. Refer to
             individual documentation of components with special integration like Table.</p>
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
@@ -52,7 +52,7 @@ export class ContextMenuDemo &#123;
             &#123;
                 label: 'File',
                 items: [&#123;
-                        label: 'New', 
+                        label: 'New',
                         icon: 'pi pi-fw pi-plus',
                         items: [
                             &#123;label: 'Project'&#125;,
@@ -170,7 +170,7 @@ export class ContextMenuDemo &#123;
                     </tbody>
                 </table>
             </div>
-            
+
             <h5>Methods</h5>
             <div class="doc-tablewrapper">
                 <table class="doc-table">

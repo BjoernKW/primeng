@@ -3,15 +3,15 @@ import {NgModule,Component,Input,AfterContentInit,OnDestroy,Output,EventEmitter,
 import {CdkVirtualScrollViewport, ScrollingModule} from '@angular/cdk/scrolling';
 import {Optional} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {TreeNode} from 'primeng/api';
-import {SharedModule} from 'primeng/api';
-import {PrimeTemplate} from 'primeng/api';
-import {TreeDragDropService} from 'primeng/api';
+import {TreeNode} from 'primeng-11/api';
+import {SharedModule} from 'primeng-11/api';
+import {PrimeTemplate} from 'primeng-11/api';
+import {TreeDragDropService} from 'primeng-11/api';
 import {Subscription} from 'rxjs';
-import {BlockableUI} from 'primeng/api';
-import {ObjectUtils} from 'primeng/utils';
-import {DomHandler} from 'primeng/dom';
-import {RippleModule} from 'primeng/ripple';
+import {BlockableUI} from 'primeng-11/api';
+import {ObjectUtils} from 'primeng-11/utils';
+import {DomHandler} from 'primeng-11/dom';
+import {RippleModule} from 'primeng-11/ripple';
 
 @Component({
     selector: 'p-treeNode',
@@ -511,7 +511,7 @@ export class UITreeNode implements OnInit {
     selector: 'p-tree',
     template: `
         <div [ngClass]="{'p-tree p-component':true,'p-tree-selectable':selectionMode,
-                'p-treenode-dragover':dragHover,'p-tree-loading': loading, 'p-tree-flex-scrollable': scrollHeight === 'flex'}" 
+                'p-treenode-dragover':dragHover,'p-tree-loading': loading, 'p-tree-flex-scrollable': scrollHeight === 'flex'}"
             [ngStyle]="style" [class]="styleClass" *ngIf="!horizontal"
             (drop)="onDrop($event)" (dragover)="onDragOver($event)" (dragenter)="onDragEnter($event)" (dragleave)="onDragLeave($event)">
             <div class="p-tree-loading-overlay p-component-overlay" *ngIf="loading">

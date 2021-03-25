@@ -1,5 +1,5 @@
 import {Component,OnInit} from '@angular/core';
-import {TreeNode} from 'primeng/api';
+import {TreeNode} from 'primeng-11/api';
 
 @Component({
     templateUrl: './treetemplatingdemo.html',
@@ -8,7 +8,7 @@ import {TreeNode} from 'primeng/api';
 export class TreeTemplatingDemo implements OnInit {
 
     nodes: TreeNode[];
-    
+
     constructor() { }
 
     ngOnInit() {

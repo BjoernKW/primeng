@@ -1,8 +1,8 @@
 import {NgModule,Component,ElementRef,AfterContentInit,Input,Output,ViewChild,EventEmitter,ContentChild,ContentChildren,QueryList,TemplateRef,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {Header,Footer,PrimeTemplate,SharedModule} from 'primeng/api';
+import {Header,Footer,PrimeTemplate,SharedModule} from 'primeng-11/api';
 import {ScrollingModule,CdkVirtualScrollViewport} from '@angular/cdk/scrolling';
-import {BlockableUI} from 'primeng/api';
+import {BlockableUI} from 'primeng-11/api';
 
 @Component({
     selector: 'p-virtualScroller',
@@ -37,12 +37,12 @@ export class VirtualScroller implements AfterContentInit,BlockableUI {
 
     @Input() value: any[];
 
-    @Input() itemSize: number; 
+    @Input() itemSize: number;
 
     @Input() style: any;
 
     @Input() styleClass: string;
-    
+
     @Input() scrollHeight: any;
 
     @Input() lazy: boolean;
@@ -54,13 +54,13 @@ export class VirtualScroller implements AfterContentInit,BlockableUI {
     @Input() maxBufferPx: number;
 
     @Input() delay: number = 250;
-  
+
     @Input() trackBy: Function = (index: number, item: any) => item;
-                
+
     @ContentChild(Header) header: Header;
 
     @ContentChild(Footer) footer: Footer;
-    
+
     @ContentChildren(PrimeTemplate) templates: QueryList<any>;
 
     @ViewChild(CdkVirtualScrollViewport) viewport: CdkVirtualScrollViewport;
@@ -131,7 +131,7 @@ export class VirtualScroller implements AfterContentInit,BlockableUI {
                 case 'footer':
                     this.footerTemplate = item.template;
                 break;
-                
+
                 default:
                     this.itemTemplate = item.template;
                 break;
@@ -149,7 +149,7 @@ export class VirtualScroller implements AfterContentInit,BlockableUI {
                 let page = Math.floor(index / this.rows);
                 let virtualScrollOffset = page === 0 ? 0 : (page - 1) * this.rows;
                 let virtualScrollChunkSize = page === 0 ? this.rows * 2 : this.rows * 3;
-  
+
                 if (page !== this.virtualPage) {
                     this.virtualPage = page;
                     this.onLazyLoad.emit({first: virtualScrollOffset, rows: virtualScrollChunkSize});

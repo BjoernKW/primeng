@@ -1,10 +1,10 @@
 import {Component, OnInit, ViewChild, OnDestroy, ChangeDetectorRef} from '@angular/core';
-import { PhotoService } from '../../service/photoservice';import { Galleria } from 'primeng/galleria';
+import { PhotoService } from '../../service/photoservice';import { Galleria } from 'primeng-11/galleria';
 
 @Component({
     templateUrl: './galleriaadvanceddemo.html',
     styleUrls: ['./galleriaadvanceddemo.scss']
-    
+
 })
 export class GalleriaAdvancedDemo implements OnInit, OnDestroy {
     images: any[];
@@ -12,14 +12,14 @@ export class GalleriaAdvancedDemo implements OnInit, OnDestroy {
     showThumbnails: boolean;
 
     fullscreen: boolean = false;
-    
+
     activeIndex: number = 0;
-    
+
     onFullScreenListener: any;
 
     @ViewChild('galleria') galleria: Galleria;
 
-    
+
     constructor(private photoService: PhotoService, private cd: ChangeDetectorRef) { }
 
     responsiveOptions:any[] = [

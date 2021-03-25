@@ -7,10 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { ButtonModule } from 'primeng/button';
-import { TooltipModule } from 'primeng/tooltip';
-import { RadioButtonModule } from 'primeng/radiobutton';
-import { InputSwitchModule } from 'primeng/inputswitch';
+import { ButtonModule } from 'primeng-11/button';
+import { TooltipModule } from 'primeng-11/tooltip';
+import { RadioButtonModule } from 'primeng-11/radiobutton';
+import { InputSwitchModule } from 'primeng-11/inputswitch';
 
 import { CarService } from './service/carservice';
 import { CountryService } from './service/countryservice';
@@ -30,7 +30,7 @@ import { AppMenuComponent } from './app.menu.component';
 import { AppConfigComponent } from './app.config.component';
 import { AppFooterComponent } from './app.footer.component';
 import { AppInputStyleSwitchModule } from './app.inputstyleswitch.component';
-import { AutoCompleteModule } from 'primeng/autocomplete';
+import { AutoCompleteModule } from 'primeng-11/autocomplete';
 
 @NgModule({
     declarations: [

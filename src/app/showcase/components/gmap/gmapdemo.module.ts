@@ -3,13 +3,13 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {GMapDemo} from './gmapdemo';
 import {GMapDemoRoutingModule} from './gmapdemo-routing.module';
-import {GMapModule} from 'primeng/gmap';
-import {ToastModule} from 'primeng/toast';
-import {CheckboxModule} from 'primeng/checkbox';
-import {DialogModule} from 'primeng/dialog';
-import {InputTextModule} from 'primeng/inputtext';
-import {ButtonModule} from 'primeng/button';
-import {TabViewModule} from 'primeng/tabview';
+import {GMapModule} from 'primeng-11/gmap';
+import {ToastModule} from 'primeng-11/toast';
+import {CheckboxModule} from 'primeng-11/checkbox';
+import {DialogModule} from 'primeng-11/dialog';
+import {InputTextModule} from 'primeng-11/inputtext';
+import {ButtonModule} from 'primeng-11/button';
+import {TabViewModule} from 'primeng-11/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

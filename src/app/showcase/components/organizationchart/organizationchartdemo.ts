@@ -1,6 +1,6 @@
 import {Component,OnInit,ViewEncapsulation} from '@angular/core';
-import {TreeNode} from 'primeng/api';
-import {MessageService} from 'primeng/api';
+import {TreeNode} from 'primeng-11/api';
+import {MessageService} from 'primeng-11/api';
 
 @Component({
     templateUrl: './organizationchartdemo.html',
@@ -10,13 +10,13 @@ import {MessageService} from 'primeng/api';
 export class OrganizationChartDemo implements OnInit {
 
     data1: TreeNode[];
-    
+
     data2: TreeNode[];
-    
+
     selectedNode: TreeNode;
-    
+
     constructor(private messageService: MessageService) {}
-    
+
     ngOnInit() {
         this.data1 = [{
             label: 'CEO',
@@ -85,7 +85,7 @@ export class OrganizationChartDemo implements OnInit {
                 }
             ]
         }];
-        
+
         this.data2 = [{
             label: 'F.C Barcelona',
             expanded: true,
@@ -117,7 +117,7 @@ export class OrganizationChartDemo implements OnInit {
             ]
         }];
     }
-    
+
     onNodeSelect(event) {
         this.messageService.add({severity: 'success', summary: 'Node Selected', detail: event.node.label});
     }

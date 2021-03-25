@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TerminalDemo} from './terminaldemo';
 import {TerminalDemoRoutingModule} from './terminaldemo-routing.module';
-import {TerminalModule} from 'primeng/terminal';
-import {TabViewModule} from 'primeng/tabview';
+import {TerminalModule} from 'primeng-11/terminal';
+import {TabViewModule} from 'primeng-11/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

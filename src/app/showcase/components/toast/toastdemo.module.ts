@@ -2,10 +2,10 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ToastDemo} from './toastdemo';
 import {ToastDemoRoutingModule} from './toastdemo-routing.module';
-import {ToastModule} from 'primeng/toast';
-import {ButtonModule} from 'primeng/button';
-import {TabViewModule} from 'primeng/tabview';
-import {RippleModule} from 'primeng/ripple';
+import {ToastModule} from 'primeng-11/toast';
+import {ButtonModule} from 'primeng-11/button';
+import {TabViewModule} from 'primeng-11/tabview';
+import {RippleModule} from 'primeng-11/ripple';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

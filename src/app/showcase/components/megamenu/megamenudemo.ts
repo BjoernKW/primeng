@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {MegaMenuItem} from 'primeng/api';
+import {MegaMenuItem} from 'primeng-11/api';
 
 @Component({
     templateUrl: './megamenudemo.html'

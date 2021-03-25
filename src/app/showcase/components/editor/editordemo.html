@@ -9,7 +9,7 @@
     <div class="card">
         <h5>Default</h5>
         <p-editor [(ngModel)]="text1" [style]="{'height':'320px'}"></p-editor>
-        
+
         <h5>Custom Toolbar</h5>
         <p-editor [(ngModel)]="text2" [style]="{'height':'320px'}">
             <ng-template pTemplate="header">
@@ -28,21 +28,21 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;EditorModule&#125; from 'primeng/editor';
+import &#123;EditorModule&#125; from 'primeng-11/editor';
 </app-code>
 
             <h5>Getting Started</h5>
             <p>Two-way value binding is defined with ngModel.</p>
-            
+
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-editor [(ngModel)]="text" [style]="&#123;'height':'320px'&#125;"&gt;&lt;/p-editor&gt;
 </app-code>
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 export class EditorDemo &#123;
-    
+
     text: string;
-        
+
 &#125;
 </app-code>
 
@@ -122,7 +122,7 @@ export class EditorDemo &#123;
                             <td>debug</td>
                             <td>string</td>
                             <td>null</td>
-                            <td>Shortcut for debug. Note debug is a static method and will affect other instances of Quill 
+                            <td>Shortcut for debug. Note debug is a static method and will affect other instances of Quill
                                 editors on the page. Only warning and error messages are enabled by default.</td>
                         </tr>
                         <tr>
@@ -135,13 +135,13 @@ export class EditorDemo &#123;
                             <td>scrollingContainer</td>
                             <td>Element</td>
                             <td>null</td>
-                            <td>DOM Element or a CSS selector for a DOM Element, specifying which container has the scrollbars (i.e. overflow-y: auto), if is has been changed from the default ql-editor with custom CSS. 
+                            <td>DOM Element or a CSS selector for a DOM Element, specifying which container has the scrollbars (i.e. overflow-y: auto), if is has been changed from the default ql-editor with custom CSS.
                                 Necessary to fix scroll jumping bugs when Quill is set to auto grow its height, and another ancestor container is responsible from the scrolling..</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            
+
             <h5>Events</h5>
             <div class="doc-tablewrapper">
                 <table class="doc-table">
@@ -178,7 +178,7 @@ export class EditorDemo &#123;
                     </tbody>
                 </table>
             </div>
-            
+
             <p>Refer to <a href="http://beta.quilljs.com/docs/api/#events">Quill documentation</a> for more information.</p>
 
             <h5>Methods</h5>
@@ -234,11 +234,11 @@ export class EditorDemo &#123;
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 npm install quill --save
 </app-code>
-            <p>Add Quill to scripts in angular-cli.json</p>  
+            <p>Add Quill to scripts in angular-cli.json</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 "scripts": [... "../node_modules/quill/dist/quill.js"],
 </app-code>
-            <p>Add Quill css to styles in angular-cli.json</p>  
+            <p>Add Quill css to styles in angular-cli.json</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 "styles": [ ... "../node_modules/quill/dist/quill.core.css", "../node_modules/quill/dist/quill.snow.css"],
 </app-code>
@@ -275,7 +275,7 @@ import &#123;Component&#125; from '@angular/core';
 export class EditorDemo &#123;
 
     text1: string = '&lt;div&gt;Hello World!&lt;/div&gt;&lt;div&gt;PrimeNG &lt;b&gt;Editor&lt;/b&gt; Rocks&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;';
-    
+
     text2: string;
 &#125;
 </app-code>

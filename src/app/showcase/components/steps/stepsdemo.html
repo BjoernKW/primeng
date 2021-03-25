@@ -18,8 +18,8 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;StepsModule&#125; from 'primeng/steps';
-import &#123;MenuItem&#125; from 'primeng/api';
+import &#123;StepsModule&#125; from 'primeng-11/steps';
+import &#123;MenuItem&#125; from 'primeng-11/api';
 </app-code>
 
             <h5>MenuModel API</h5>
@@ -172,7 +172,7 @@ export class MenuDemo &#123;
 export class StepsDemo implements OnInit &#123;
 
     items: MenuItem[];
-    
+
     subscription: Subscription;
 
     constructor(public messageService: MessageService, public ticketService: TicketService) &#123;&#125;
@@ -223,17 +223,17 @@ export class StepsDemo implements OnInit &#123;
             &lt;div class="p-fluid"&gt;
                 &lt;div class="p-field"&gt;
                     &lt;label for="firstname"&gt;Firstname&lt;/label&gt;
-                    &lt;input #firstname="ngModel" id="firstname" type="text" required pInputText [(ngModel)]="personalInformation.firstname" [ngClass]="&#123;'ng-dirty': (firstname.invalid && submitted) || (firstname.dirty && firstname.invalid)&#125;"&gt; 
+                    &lt;input #firstname="ngModel" id="firstname" type="text" required pInputText [(ngModel)]="personalInformation.firstname" [ngClass]="&#123;'ng-dirty': (firstname.invalid && submitted) || (firstname.dirty && firstname.invalid)&#125;"&gt;
                     &lt;small *ngIf="(firstname.invalid && submitted) || (firstname.dirty && firstname.invalid)" class="p-error"&gt;Firstname is required.&lt;/small&gt;
                 &lt;/div&gt;
                 &lt;div class="p-field"&gt;
                     &lt;label for="lastname"&gt;Lastname&lt;/label&gt;
-                    &lt;input #lastname="ngModel" id="lastname" type="text" required pInputText [(ngModel)]="personalInformation.lastname" [ngClass]="&#123;'ng-dirty': (lastname.invalid && submitted) || (lastname.dirty && lastname.invalid)&#125;"&gt; 
+                    &lt;input #lastname="ngModel" id="lastname" type="text" required pInputText [(ngModel)]="personalInformation.lastname" [ngClass]="&#123;'ng-dirty': (lastname.invalid && submitted) || (lastname.dirty && lastname.invalid)&#125;"&gt;
                     &lt;small class="p-error" *ngIf="(lastname.invalid && submitted )|| (lastname.dirty && lastname.invalid)"&gt;Lastname is required.&lt;/small&gt;
                 &lt;/div&gt;
                 &lt;div class="p-field"&gt;
                     &lt;label for="age"&gt;Age&lt;/label&gt;
-                    &lt;input #age="ngModel" id="age" type="number" required pInputText [(ngModel)]="personalInformation.age" [ngClass]="&#123;'ng-dirty': (age.invalid && submitted) || (age.dirty && age.invalid)&#125;"&gt; 
+                    &lt;input #age="ngModel" id="age" type="number" required pInputText [(ngModel)]="personalInformation.age" [ngClass]="&#123;'ng-dirty': (age.invalid && submitted) || (age.dirty && age.invalid)&#125;"&gt;
                     &lt;small class="p-error" *ngIf="(age.invalid && submitted) || (age.dirty && age.invalid)"&gt;Age is required.&lt;/small&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -256,7 +256,7 @@ export class PersonalDemo implements OnInit &#123;
 
     constructor(public ticketService: TicketService, private router: Router) &#123; &#125;
 
-    ngOnInit() &#123; 
+    ngOnInit() &#123;
         this.personalInformation = this.ticketService.getTicketInformation().personalInformation;
     &#125;
 
@@ -311,25 +311,25 @@ export class PersonalDemo implements OnInit &#123;
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 export class SeatDemo implements OnInit &#123;
-    
+
     constructor(public ticketService: TicketService, private router: Router) &#123; &#125;
 
     classes: any[];
 
     vagons: any[];
-    
+
     seats: any[];
 
     seatInformation: any;
 
-    ngOnInit() &#123; 
+    ngOnInit() &#123;
         this.seatInformation = this.ticketService.ticketInformation.seatInformation;
 
         this.classes = [
             &#123;name: 'First Class', code: 'A', factor: 1&#125;,
             &#123;name: 'Second Class', code: 'B', factor: 2&#125;,
             &#123;name: 'Third Class', code: 'C', factor: 3&#125;
-        ];    
+        ];
     &#125;
 
     setVagons(event) &#123;
@@ -341,7 +341,7 @@ export class SeatDemo implements OnInit &#123;
             &#125;
         &#125;
     &#125;
-    
+
     setSeats(event) &#123;
         if (this.seatInformation.wagon && event.value) &#123;
             this.seats = [];
@@ -378,7 +378,7 @@ export class SeatDemo implements OnInit &#123;
             &lt;div class="p-fluid p-formgrid p-grid"&gt;
                 &lt;div class="p-field p-col-12"&gt;
                     &lt;label for="class"&gt;Card Holder Name&lt;/label&gt;
-                    &lt;input type="text" required pInputText [(ngModel)]="paymentInformation.cardholderName"&gt; 
+                    &lt;input type="text" required pInputText [(ngModel)]="paymentInformation.cardholderName"&gt;
                 &lt;/div&gt;
                 &lt;div class="p-field p-col-8"&gt;
                     &lt;label id="number" for="lastname"&gt;Number&lt;/label&gt;
@@ -415,7 +415,7 @@ export class PaymentDemo implements OnInit &#123;
 
     constructor(public ticketService: TicketService, private router: Router) &#123; &#125;
 
-    ngOnInit() &#123; 
+    ngOnInit() &#123;
         this.paymentInformation = this.ticketService.ticketInformation.paymentInformation;
     &#125;
 
@@ -492,12 +492,12 @@ export class PaymentDemo implements OnInit &#123;
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 export class ConfirmationDemo implements OnInit &#123;
-    
+
     ticketInformation: any;
-    
+
     constructor(public ticketService: TicketService, private router: Router) &#123; &#125;
 
-    ngOnInit() &#123; 
+    ngOnInit() &#123;
         this.ticketInformation = this.ticketService.ticketInformation;
     &#125;
 

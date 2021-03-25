@@ -25,7 +25,7 @@
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 import &#123;Component,OnInit&#125; from '@angular/core';
 import &#123;NodeService&#125; from '../../service/nodeservice';
-import &#123;TreeNode&#125; from 'primeng/api';
+import &#123;TreeNode&#125; from 'primeng-11/api';
 
 @Component(&#123;
     templateUrl: './treehorizontaldemo.html'
@@ -35,7 +35,7 @@ export class TreeHorizontalDemo implements OnInit &#123;
     files: TreeNode[];
 
     selectedFile: TreeNode;
-    
+
     constructor(private nodeService: NodeService) &#123; &#125;
 
     ngOnInit() &#123;
@@ -47,7 +47,7 @@ export class TreeHorizontalDemo implements OnInit &#123;
         &#125;);
     &#125;
 &#125;
-</app-code>   
+</app-code>
         </p-tabPanel>
         <p-tabPanel header="StackBlitz">
             <ng-template pTemplate="content">

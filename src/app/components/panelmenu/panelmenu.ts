@@ -1,26 +1,26 @@
 import {NgModule,Component,Input,ChangeDetectorRef,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
 import {trigger,state,style,transition,animate} from '@angular/animations';
 import {CommonModule} from '@angular/common';
-import {MenuItem} from 'primeng/api';
+import {MenuItem} from 'primeng-11/api';
 import {RouterModule} from '@angular/router';
 
 export class BasePanelMenuItem {
 
     constructor(private ref: ChangeDetectorRef) {}
-        
+
     handleClick(event, item) {
         if (item.disabled) {
             event.preventDefault();
             return;
         }
-        
+
         item.expanded = !item.expanded;
         this.ref.detectChanges();
-        
+
         if (!item.url) {
             event.preventDefault();
         }
-                   
+
         if (item.command) {
             item.command({
                 originalEvent: event,
@@ -45,7 +45,7 @@ export class BasePanelMenuItem {
                         <span class="p-menuitem-text" *ngIf="child.escape !== false; else htmlLabel">{{child.label}}</span>
                         <ng-template #htmlLabel><span class="p-menuitem-text" [innerHTML]="child.label"></span></ng-template>
                     </a>
-                    <a *ngIf="child.routerLink" [routerLink]="child.routerLink" [queryParams]="child.queryParams" [routerLinkActive]="'p-menuitem-link-active'" [routerLinkActiveOptions]="child.routerLinkActiveOptions||{exact:false}" class="p-menuitem-link" 
+                    <a *ngIf="child.routerLink" [routerLink]="child.routerLink" [queryParams]="child.queryParams" [routerLinkActive]="'p-menuitem-link-active'" [routerLinkActiveOptions]="child.routerLinkActiveOptions||{exact:false}" class="p-menuitem-link"
                         [ngClass]="{'p-disabled':child.disabled}" [attr.tabindex]="!item.expanded ? null : child.disabled ? null : '0'" [attr.id]="child.id" role="treeitem" [attr.aria-expanded]="child.expanded"
                         (click)="handleClick($event,child)" [attr.target]="child.target" [attr.title]="child.title"
                         [fragment]="child.fragment" [queryParamsHandling]="child.queryParamsHandling" [preserveFragment]="child.preserveFragment" [skipLocationChange]="child.skipLocationChange" [replaceUrl]="child.replaceUrl" [state]="child.state">
@@ -75,9 +75,9 @@ export class BasePanelMenuItem {
     encapsulation: ViewEncapsulation.None
 })
 export class PanelMenuSub extends BasePanelMenuItem {
-    
+
     @Input() item: MenuItem;
-    
+
     @Input() expanded: boolean;
 
     @Input() transitionOptions: string;
@@ -139,7 +139,7 @@ export class PanelMenuSub extends BasePanelMenuItem {
     styleUrls: ['./panelmenu.css']
 })
 export class PanelMenu extends BasePanelMenuItem {
-    
+
     @Input() model: MenuItem[];
 
     @Input() style: any;
@@ -149,13 +149,13 @@ export class PanelMenu extends BasePanelMenuItem {
     @Input() multiple: boolean = true;
 
     @Input() transitionOptions: string = '400ms cubic-bezier(0.86, 0, 0.07, 1)';
-    
+
     public animating: boolean;
 
     constructor(ref: ChangeDetectorRef) {
         super(ref);
     }
-                
+
     collapseAll() {
     	for(let item of this.model) {
     		if (item.expanded) {
@@ -172,11 +172,11 @@ export class PanelMenu extends BasePanelMenuItem {
         		}
         	}
     	}
-        
+
         this.animating = true;
         super.handleClick(event, item);
     }
-    
+
     onToggleDone() {
         this.animating = false;
     }

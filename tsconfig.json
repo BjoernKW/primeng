@@ -19,7 +19,7 @@
             "dom"
         ],
         "paths": {
-            "primeng/*": ["src/app/components/*/public_api"]
+            "primeng-11/*": ["src/app/components/*/public_api"]
         }
      }
     }

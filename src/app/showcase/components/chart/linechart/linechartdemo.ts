@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MessageService} from 'primeng/api';
+import {MessageService} from 'primeng-11/api';
 import {Subscription} from 'rxjs';
 import {AppConfigService} from '../../../service/appconfigservice';
 import {AppConfig} from '../../../domain/appconfig';
@@ -19,7 +19,7 @@ export class LineChartDemo implements OnInit {
     lineStylesData: any;
 
     basicOptions: any;
-    
+
     subscription: Subscription;
 
     config: AppConfig;
@@ -109,7 +109,7 @@ export class LineChartDemo implements OnInit {
                 }
             ]
         };
-        
+
         this.config = this.configService.config;
         this.updateChartOptions();
         this.subscription = this.configService.configUpdate$.subscribe(config => {
@@ -119,7 +119,7 @@ export class LineChartDemo implements OnInit {
     }
 
     updateChartOptions() {
-        if (this.config.dark) 
+        if (this.config.dark)
             this.applyDarkTheme();
         else
             this.applyLightTheme();

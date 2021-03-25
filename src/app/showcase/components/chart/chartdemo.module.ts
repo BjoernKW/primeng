@@ -9,9 +9,9 @@ import {LineChartDemo} from './linechart/linechartdemo';
 import {PolarAreaChartDemo} from './polarareachart/polarareachartdemo';
 import {ComboChartDemo} from './combochart/comobochartdemo';
 import {RadarChartDemo} from './radarchart/radarchartdemo';
-import {ChartModule} from 'primeng/chart';
-import {ToastModule} from 'primeng/toast';
-import {TabViewModule} from 'primeng/tabview';
+import {ChartModule} from 'primeng-11/chart';
+import {ToastModule} from 'primeng-11/toast';
+import {TabViewModule} from 'primeng-11/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

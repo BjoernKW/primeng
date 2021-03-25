@@ -3,7 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { AppConfigService } from './service/appconfigservice';
 import { AppConfig } from './domain/appconfig';
 import { Subscription } from 'rxjs';
-import { PrimeNGConfig } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng-11/api';
 
 declare let gtag: Function;
 
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
         let appTheme;
         const queryString = window.location.search;
-        
+
         if (queryString)
             appTheme = new URLSearchParams(queryString.substring(1)).get('theme');
         else
@@ -136,7 +136,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
         if (this.config.theme === 'nano')
             this.applyScale(12);
-        
+
     }
 
     isDarkTheme(theme) {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FilterService, SelectItemGroup } from 'primeng/api';
+import { FilterService, SelectItemGroup } from 'primeng-11/api';
 import { CountryService } from '../../service/countryservice';
 @Component({
     templateUrl: './autocompletedemo.html'
@@ -7,31 +7,31 @@ import { CountryService } from '../../service/countryservice';
 export class AutoCompleteDemo {
 
     selectedCountry: any;
-    
+
     countries: any[];
-        
+
     filteredCountries: any[];
 
     selectedCountries: any[];
-    
+
     selectedCountryAdvanced: any[];
-    
+
     filteredBrands: any[];
-    
+
     groupedCities: SelectItemGroup[];
 
     filteredGroups: any[];
 
     constructor(private countryService: CountryService, private filterService: FilterService) { }
-    
-    ngOnInit() {        
+
+    ngOnInit() {
         this.countryService.getCountries().then(countries => {
             this.countries = countries;
         });
 
         this.groupedCities = [
             {
-                label: 'Germany', value: 'de', 
+                label: 'Germany', value: 'de',
                 items: [
                     {label: 'Berlin', value: 'Berlin'},
                     {label: 'Frankfurt', value: 'Frankfurt'},
@@ -40,7 +40,7 @@ export class AutoCompleteDemo {
                 ]
             },
             {
-                label: 'USA', value: 'us', 
+                label: 'USA', value: 'us',
                 items: [
                     {label: 'Chicago', value: 'Chicago'},
                     {label: 'Los Angeles', value: 'Los Angeles'},
@@ -49,7 +49,7 @@ export class AutoCompleteDemo {
                 ]
             },
             {
-                label: 'Japan', value: 'jp', 
+                label: 'Japan', value: 'jp',
                 items: [
                     {label: 'Kyoto', value: 'Kyoto'},
                     {label: 'Osaka', value: 'Osaka'},
@@ -59,7 +59,7 @@ export class AutoCompleteDemo {
             }
         ];
     }
-    
+
     filterCountry(event) {
         //in a real application, make a request to a remote url with the query and return filtered results, for demo we filter at client side
         let filtered : any[] = [];
@@ -70,7 +70,7 @@ export class AutoCompleteDemo {
                 filtered.push(country);
             }
         }
-        
+
         this.filteredCountries = filtered;
     }
 

@@ -1,6 +1,6 @@
 import {Component,OnInit} from '@angular/core';
-import {MessageService} from 'primeng/api';
-import {MenuItem} from 'primeng/api';
+import {MessageService} from 'primeng-11/api';
+import {MenuItem} from 'primeng-11/api';
 
 @Component({
     templateUrl: './splitbuttondemo.html',
@@ -12,11 +12,11 @@ import {MenuItem} from 'primeng/api';
     `]
 })
 export class SplitButtonDemo implements OnInit {
-    
+
     items: MenuItem[];
-    
+
     constructor(private messageService: MessageService) {}
-    
+
     ngOnInit() {
         this.items = [
             {label: 'Update', icon: 'pi pi-refresh', command: () => {
@@ -34,11 +34,11 @@ export class SplitButtonDemo implements OnInit {
     save(severity: string) {
         this.messageService.add({severity: severity, summary:'Success', detail:'Data Saved'});
     }
-    
+
     update() {
         this.messageService.add({severity:'success', summary:'Success', detail:'Data Updated'});
     }
-    
+
     delete() {
         this.messageService.add({severity:'success', summary:'Success', detail:'Data Deleted'});
     }

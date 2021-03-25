@@ -1,5 +1,5 @@
 import {Component,OnInit} from '@angular/core';
-import {PrimeIcons} from 'primeng/api';
+import {PrimeIcons} from 'primeng-11/api';
 
 @Component({
     templateUrl: './timelinedemo.html',
@@ -8,9 +8,9 @@ import {PrimeIcons} from 'primeng/api';
 export class TimelineDemo implements OnInit {
 
     events1: any[];
-    
+
     events2: any[];
-    
+
     ngOnInit() {
         this.events1 = [
             {status: 'Ordered', date: '15/10/2020 10:30', icon: PrimeIcons.SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg'},

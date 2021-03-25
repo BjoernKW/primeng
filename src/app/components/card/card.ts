@@ -1,7 +1,7 @@
 import { NgModule, Component, Input, ElementRef, ContentChild, ChangeDetectionStrategy, ViewEncapsulation, TemplateRef, AfterContentInit, ContentChildren, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule, Header, Footer, PrimeTemplate } from 'primeng/api';
-import { BlockableUI } from 'primeng/api';
+import { SharedModule, Header, Footer, PrimeTemplate } from 'primeng-11/api';
+import { BlockableUI } from 'primeng-11/api';
 
 @Component({
     selector: 'p-card',
@@ -52,13 +52,13 @@ export class Card implements AfterContentInit,BlockableUI {
     @ContentChildren(PrimeTemplate) templates: QueryList<any>;
 
     headerTemplate: TemplateRef<any>;
-    
+
     titleTemplate: TemplateRef<any>;
-    
+
     subtitleTemplate: TemplateRef<any>;
-    
+
     contentTemplate: TemplateRef<any>;
-    
+
     footerTemplate: TemplateRef<any>;
 
     constructor(private el: ElementRef) { }
@@ -85,7 +85,7 @@ export class Card implements AfterContentInit,BlockableUI {
                 case 'footer':
                     this.footerTemplate = item.template;
                 break;
-                
+
                 default:
                     this.contentTemplate = item.template;
                 break;

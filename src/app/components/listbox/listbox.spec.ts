@@ -2,13 +2,13 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { Listbox } from './listbox';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { TooltipModule } from 'primeng/tooltip';
+import { TooltipModule } from 'primeng-11/tooltip';
 
 describe('Listbox', () => {
-  
+
     let listbox: Listbox;
     let fixture: ComponentFixture<Listbox>;
-    
+
     beforeEach(() => {
       TestBed.configureTestingModule({
         imports: [
@@ -19,14 +19,14 @@ describe('Listbox', () => {
           Listbox
         ]
       });
-      
+
       fixture = TestBed.createComponent(Listbox);
       listbox = fixture.componentInstance;
     });
 
     it('should created by default', () => {
         fixture.detectChanges();
-        
+
         const listboxEl = fixture.debugElement.query(By.css('div'));
         expect(listboxEl).toBeTruthy();
     });
@@ -50,7 +50,7 @@ describe('Listbox', () => {
         ];
         const clickSingleSpy = spyOn(listbox, 'onOptionClickCheckbox').and.callThrough();
         fixture.detectChanges();
-        
+
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
         bmwEl.click();
         fixture.detectChanges();
@@ -76,7 +76,7 @@ describe('Listbox', () => {
             {label: 'Volvo', value: 'Volvo'}
         ];
         fixture.detectChanges();
-        
+
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
         const onOptionTouchEndSpy = spyOn(listbox,'onOptionTouchEnd').and.callThrough();
         bmwEl.dispatchEvent(new Event('touchend'));
@@ -101,7 +101,7 @@ describe('Listbox', () => {
         ];
         listbox.readonly = true;
         fixture.detectChanges();
-        
+
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
         const onOptionTouchEndSpy = spyOn(listbox,'onOptionTouchEnd').and.callThrough();
         bmwEl.dispatchEvent(new Event('touchend'));
@@ -116,7 +116,7 @@ describe('Listbox', () => {
         listbox.style = {'height' : '300px'};
         listbox.styleClass = "Primeng ROCKS!"
         fixture.detectChanges();
-        
+
         const listboxEl = fixture.debugElement.query(By.css('div')).nativeElement;
         expect(listboxEl.className).toContain("Primeng ROCKS!");
         expect(listboxEl.style.height).toEqual("300px");
@@ -136,7 +136,7 @@ describe('Listbox', () => {
             {label: 'Volvo', value: 'Volvo'}
         ];
         fixture.detectChanges();
-        
+
         const onOptionClick = spyOn(listbox, 'onOptionClick').and.callThrough();
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
         bmwEl.click();
@@ -163,7 +163,7 @@ describe('Listbox', () => {
         ];
         listbox.metaKeySelection = false;
         fixture.detectChanges();
-        
+
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
         bmwEl.click();
         fixture.detectChanges();
@@ -194,12 +194,12 @@ describe('Listbox', () => {
         ];
         const clickMultipleSpy = spyOn(listbox, 'onOptionClickMultiple').and.callThrough();
         fixture.detectChanges();
-        
+
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
         const audiEl = fixture.debugElement.query(By.css('ul')).children[0].nativeElement;
         bmwEl.click();
         fixture.detectChanges();
-        
+
         audiEl.click();
         fixture.detectChanges();
 
@@ -227,10 +227,10 @@ describe('Listbox', () => {
         ];
         const clickMultipleSpy = spyOn(listbox, 'onOptionClickMultiple').and.callThrough();
         fixture.detectChanges();
-        
+
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
         const audiEl = fixture.debugElement.query(By.css('ul')).children[0].nativeElement;
-        bmwEl.click();      
+        bmwEl.click();
         audiEl.click();
         bmwEl.click();
         audiEl.click();
@@ -287,7 +287,7 @@ describe('Listbox', () => {
         ];
         listbox.filter = true;
         fixture.detectChanges();
-        
+
         const filterInputEl = fixture.debugElement.query(By.css('.p-listbox-filter-container')).children[0].nativeElement;
         filterInputEl.value = "f";
         filterInputEl.dispatchEvent(new Event('input'));
@@ -312,7 +312,7 @@ describe('Listbox', () => {
         let data;
         listbox.onChange.subscribe(value => data=value);
         fixture.detectChanges();
-        
+
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
         bmwEl.click();
         fixture.detectChanges();
@@ -339,7 +339,7 @@ describe('Listbox', () => {
         listbox.onDblClick.subscribe(value => data = value);
         const onOptionDoubleClickSpy = spyOn(listbox,"onOptionDoubleClick").and.callThrough();
         fixture.detectChanges();
-        
+
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1];
         bmwEl.nativeElement.click();
         bmwEl.triggerEventHandler("dblclick", new MouseEvent("dblclick"));
@@ -368,7 +368,7 @@ describe('Listbox', () => {
         listbox.onDblClick.subscribe(value => data = value);
         const onOptionDoubleClickSpy = spyOn(listbox,"onOptionDoubleClick").and.callThrough();
         fixture.detectChanges();
-        
+
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1];
         bmwEl.triggerEventHandler("dblclick", new MouseEvent("dblclick"));
         fixture.detectChanges();
@@ -393,7 +393,7 @@ describe('Listbox', () => {
         listbox.metaKeySelection = true;
         const onOptionClick = spyOn(listbox, 'onOptionClick').and.callThrough();
         fixture.detectChanges();
-        
+
         let data;
         listbox.onChange.subscribe(value => data=value);
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
@@ -405,7 +405,7 @@ describe('Listbox', () => {
 
         listbox.onOptionClick(event,listbox.options[1]);
         fixture.detectChanges();
-        
+
         listbox.cd.detectChanges();
         expect(listbox.value).toEqual(null);
         expect(bmwEl.className).not.toContain("p-highlight");
@@ -430,7 +430,7 @@ describe('Listbox', () => {
         listbox.multiple = true;
         const onOptionClick = spyOn(listbox, 'onOptionClick').and.callThrough();
         fixture.detectChanges();
-        
+
         let data;
         listbox.onChange.subscribe(value => data=value);
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
@@ -442,7 +442,7 @@ describe('Listbox', () => {
 
         listbox.onOptionClick(event,listbox.options[1]);
         fixture.detectChanges();
-        
+
         listbox.cd.detectChanges();
         expect(listbox.value).toEqual([]);
         expect(bmwEl.className).not.toContain("p-highlight");
@@ -467,7 +467,7 @@ describe('Listbox', () => {
         ];
         const clickCheckboxSpy = spyOn(listbox, 'onOptionClickCheckbox').and.callThrough();
         fixture.detectChanges();
-        
+
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
         const audiEl = fixture.debugElement.query(By.css('ul')).children[0].nativeElement;
         bmwEl.click();
@@ -501,7 +501,7 @@ describe('Listbox', () => {
         ];
         const toggleAllSpy = spyOn(listbox, 'toggleAll').and.callThrough();
         fixture.detectChanges();
-        
+
         listbox.cd.detectChanges();
         const selectAllEl = fixture.debugElement.query(By.css('.p-checkbox-box')).nativeElement;
         selectAllEl.click();
@@ -534,7 +534,7 @@ describe('Listbox', () => {
         ];
         const toggleAllSpy = spyOn(listbox, 'toggleAll').and.callThrough();
         fixture.detectChanges();
-        
+
         listbox.cd.detectChanges();
         const selectAllEl = fixture.debugElement.query(By.css('.p-checkbox-box')).nativeElement;
         selectAllEl.click();
@@ -599,7 +599,7 @@ describe('Listbox', () => {
         listbox.filterValue = "m";
         headerCheckBoxReadonlyEl.nativeElement.dispatchEvent(new Event("blur"));
         fixture.detectChanges();
-        
+
         expect(headerCheckBoxEl.nativeElement.className).not.toContain("p-highlight");
         expect(headerCheckBoxEl.nativeElement.className).not.toContain("p-focus");
     });
@@ -621,7 +621,7 @@ describe('Listbox', () => {
         const findNextItemSpy = spyOn(listbox,"findNextItem").and.callThrough();
         const findPrevItemSpy = spyOn(listbox,"findPrevItem").and.callThrough();
         fixture.detectChanges();
- 
+
         const bmwEl = fixture.debugElement.query(By.css('ul')).children[1].nativeElement;
         const event: any = document.createEvent('CustomEvent');
         event.which = 40;

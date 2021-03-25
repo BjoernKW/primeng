@@ -1,19 +1,19 @@
 import {NgModule,Component,OnDestroy,Input,Output,EventEmitter,AfterContentInit,Optional,ElementRef,ChangeDetectionStrategy,ContentChildren,QueryList,TemplateRef, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {trigger,state,style,transition,animate} from '@angular/animations';
-import {Message,PrimeTemplate,MessageService} from 'primeng/api';
+import {Message,PrimeTemplate,MessageService} from 'primeng-11/api';
 import {Subscription} from 'rxjs';
-import {RippleModule} from 'primeng/ripple';
+import {RippleModule} from 'primeng-11/ripple';
 
 @Component({
     selector: 'p-messages',
     template: `
         <div class="p-messages p-component" role="alert" [ngStyle]="style" [class]="styleClass">
             <ng-container *ngIf="!contentTemplate; else staticMessage">
-                <div *ngFor="let msg of value; let i=index" [ngClass]="'p-message p-message-' + msg.severity" role="alert" 
+                <div *ngFor="let msg of value; let i=index" [ngClass]="'p-message p-message-' + msg.severity" role="alert"
                     [@messageAnimation]="{value: 'visible', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}">
                     <div class="p-message-wrapper">
-                       <span [class]="'p-message-icon pi' + (msg.icon ? ' ' + msg.icon : '')" [ngClass]="{'pi-info-circle': msg.severity === 'info', 
+                       <span [class]="'p-message-icon pi' + (msg.icon ? ' ' + msg.icon : '')" [ngClass]="{'pi-info-circle': msg.severity === 'info',
                             'pi-check': msg.severity === 'success',
                             'pi-exclamation-triangle': msg.severity === 'warn',
                             'pi-times-circle': msg.severity === 'error'}"></span>

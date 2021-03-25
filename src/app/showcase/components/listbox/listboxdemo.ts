@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SelectItemGroup } from 'primeng/api';
+import { SelectItemGroup } from 'primeng-11/api';
 
 interface City {
     name: string,
@@ -17,7 +17,7 @@ interface Country {
 export class ListboxDemo {
 
     groupedCities: SelectItemGroup[];
-    
+
     cities: City[];
 
     countries: Country[];
@@ -27,7 +27,7 @@ export class ListboxDemo {
     selectedCountries: Country[];
 
     selectedCities: any[];
-    
+
     constructor() {
         this.cities = [
             {name: 'New York', code: 'NY'},
@@ -52,7 +52,7 @@ export class ListboxDemo {
 
         this.groupedCities = [
             {
-                label: 'Germany', value: 'de', 
+                label: 'Germany', value: 'de',
                 items: [
                     {label: 'Berlin', value: 'Berlin'},
                     {label: 'Frankfurt', value: 'Frankfurt'},
@@ -61,7 +61,7 @@ export class ListboxDemo {
                 ]
             },
             {
-                label: 'USA', value: 'us', 
+                label: 'USA', value: 'us',
                 items: [
                     {label: 'Chicago', value: 'Chicago'},
                     {label: 'Los Angeles', value: 'Los Angeles'},
@@ -70,7 +70,7 @@ export class ListboxDemo {
                 ]
             },
             {
-                label: 'Japan', value: 'jp', 
+                label: 'Japan', value: 'jp',
                 items: [
                     {label: 'Kyoto', value: 'Kyoto'},
                     {label: 'Osaka', value: 'Osaka'},
@@ -80,5 +80,5 @@ export class ListboxDemo {
             }
         ];
     }
-    
+
 }

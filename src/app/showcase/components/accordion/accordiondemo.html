@@ -7,7 +7,7 @@
 
 <div class="content-section implementation">
     <p-toast></p-toast>
-    
+
     <div class="card">
         <h5>Default</h5>
         <p-accordion>
@@ -27,7 +27,7 @@
                             Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
             </p-accordionTab>
         </p-accordion>
-    
+
         <h5>Multiple</h5>
         <p-accordion [multiple]="true">
             <p-accordionTab header="Header I">
@@ -46,14 +46,14 @@
                     Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
             </p-accordionTab>
         </p-accordion>
-            
+
         <h5>Programmatic</h5>
         <div class="p-py-3">
             <p-button [icon]="activeState[0] ? 'pi pi-minus' : 'pi pi-plus'" (click)="toggle(0)" styleClass="p-button-text" label="Toggle 1st"></p-button>
             <p-button [icon]="activeState[1] ? 'pi pi-minus' : 'pi pi-plus'" (click)="toggle(1)" styleClass="p-button-text p-ml-2" label="Toggle 2st"></p-button>
             <p-button [icon]="activeState[2] ? 'pi pi-minus' : 'pi pi-plus'" (click)="toggle(2)" styleClass="p-button-text p-ml-2" label="Toggle 3st"></p-button>
         </div>
-            
+
         <p-accordion>
             <p-accordionTab header="Header I" [(selected)]="activeState[0]">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -71,7 +71,7 @@
                     Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
             </p-accordionTab>
         </p-accordion>
-    
+
         <h5>Tab Change Event</h5>
         <p-accordion (onClose)="onTabClose($event)" (onOpen)="onTabOpen($event)">
             <p-accordionTab header="Header I">
@@ -103,7 +103,7 @@
         <p-tabPanel header ="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;AccordionModule&#125; from 'primeng/accordion';
+import &#123;AccordionModule&#125; from 'primeng-11/accordion';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -117,7 +117,7 @@ import &#123;AccordionModule&#125; from 'primeng/accordion';
         Content 2
     &lt;/p-accordionTab&gt;
     &lt;p-accordionTab header="Header 3"&gt;
-        Content 3    
+        Content 3
     &lt;/p-accordionTab&gt;
 &lt;/p-accordion&gt;
 </app-code>
@@ -133,7 +133,7 @@ import &#123;AccordionModule&#125; from 'primeng/accordion';
         Content 2
     &lt;/p-accordionTab&gt;
     &lt;p-accordionTab header="Header 3"&gt;
-        Content 3    
+        Content 3
     &lt;/p-accordionTab&gt;
 &lt;/p-accordion&gt;
 </app-code>
@@ -150,7 +150,7 @@ import &#123;AccordionModule&#125; from 'primeng/accordion';
         Content 2
     &lt;/p-accordionTab&gt;
     &lt;p-accordionTab header="Header 3"&gt;
-        Content 3    
+        Content 3
     &lt;/p-accordionTab&gt;
 &lt;/p-accordion&gt;
 </app-code>
@@ -167,7 +167,7 @@ import &#123;AccordionModule&#125; from 'primeng/accordion';
         Content 2
     &lt;/p-accordionTab&gt;
     &lt;p-accordionTab header="Header 3"&gt;
-        Content 3    
+        Content 3
     &lt;/p-accordionTab&gt;
 &lt;/p-accordion&gt;
 </app-code>
@@ -191,7 +191,7 @@ import &#123;AccordionModule&#125; from 'primeng/accordion';
     &lt;p-button [icon]="activeState[1] ? 'pi pi-minus' : 'pi pi-plus'" (click)="toggle(1)" styleClass="p-button-text p-ml-2" label="Toggle 2st"&gt;&lt;/p-button&gt;
     &lt;p-button [icon]="activeState[2] ? 'pi pi-minus' : 'pi pi-plus'" (click)="toggle(2)" styleClass="p-button-text p-ml-2" label="Toggle 3st"&gt;&lt;/p-button&gt;
 &lt;/div&gt;
-        
+
 &lt;p-accordion&gt;
     &lt;p-accordionTab header="Header I" [(selected)]="activeState[0]"&gt;
         &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -210,10 +210,10 @@ import &#123;AccordionModule&#125; from 'primeng/accordion';
     &lt;/p-accordionTab&gt;
 &lt;/p-accordion&gt;
 </app-code>
-    
+
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 export class AccordionDemo &#123;
-    
+
     activeState: boolean[] = [true, false, false];
 
     toggle(index: number) &#123;
@@ -246,13 +246,13 @@ export class AccordionDemo &#123;
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 export class AccordionDemo &#123;
-    
+
     index: number = 0;
 
     openNext() &#123;
         this.index = (this.index === 2) ? 0 : this.index + 1;
     &#125;
-    
+
     openPrev() &#123;
         this.index = (this.index === 0) ? 2 : this.index - 1;
     &#125;
@@ -260,7 +260,7 @@ export class AccordionDemo &#123;
 </app-code>
 
             <h5>Animation Configuration</h5>
-            <p>Transition of the toggle animation can be customized using the transitionOptions property with a default value as <b>400ms cubic-bezier(0.86, 0, 0.07, 1)</b>, 
+            <p>Transition of the toggle animation can be customized using the transitionOptions property with a default value as <b>400ms cubic-bezier(0.86, 0, 0.07, 1)</b>,
                 example below disables the animation altogether.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-accordionTab [transitionOptions]="'0ms'" header="Header 1"&gt;
@@ -318,7 +318,7 @@ export class AccordionDemo &#123;
                     </tbody>
                 </table>
             </div>
-            
+
             <h5>Properties for AccordionTab</h5>
             <div class="doc-tablewrapper">
                 <table class="doc-table">
@@ -483,14 +483,14 @@ onTabOpen(e) &#123;
             Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.&lt;/p&gt;
     &lt;/p-accordionTab&gt;
 &lt;/p-accordion&gt;
-    
+
 &lt;h5&gt;Programmatic&lt;/h5&gt;
 &lt;div class="p-py-3"&gt;
     &lt;p-button [icon]="activeState[0] ? 'pi pi-minus' : 'pi pi-plus'" (click)="toggle(0)" styleClass="p-button-text" label="Toggle 1st"&gt;&lt;/p-button&gt;
     &lt;p-button [icon]="activeState[1] ? 'pi pi-minus' : 'pi pi-plus'" (click)="toggle(1)" styleClass="p-button-text p-ml-2" label="Toggle 2st"&gt;&lt;/p-button&gt;
     &lt;p-button [icon]="activeState[2] ? 'pi pi-minus' : 'pi pi-plus'" (click)="toggle(2)" styleClass="p-button-text p-ml-2" label="Toggle 3st"&gt;&lt;/p-button&gt;
 &lt;/div&gt;
-    
+
 &lt;p-accordion&gt;
     &lt;p-accordionTab header="Header I" [(selected)]="activeState[0]"&gt;
         &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -536,7 +536,7 @@ onTabOpen(e) &#123;
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 import &#123;Component&#125; from '@angular/core';
-import &#123;MessageService&#125; from 'primeng/api';
+import &#123;MessageService&#125; from 'primeng-11/api';
 
 @Component(&#123;
     templateUrl: './accordiondemo.html',
@@ -544,7 +544,7 @@ import &#123;MessageService&#125; from 'primeng/api';
     styleUrls: ['./accordiondemo.scss']
 &#125;)
 export class AccordionDemo &#123;
-    
+
     activeState: boolean[] = [true, false, false];
 
     constructor(private messageService: MessageService) &#123;&#125;
@@ -552,7 +552,7 @@ export class AccordionDemo &#123;
     onTabClose(event) &#123;
         this.messageService.add(&#123;severity:'info', summary:'Tab Closed', detail: 'Index: ' + event.index&#125;)
     &#125;
-    
+
     onTabOpen(event) &#123;
         this.messageService.add(&#123;severity:'info', summary:'Tab Expanded', detail: 'Index: ' + event.index&#125;);
     &#125;

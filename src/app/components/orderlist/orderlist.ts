@@ -1,10 +1,10 @@
 import {NgModule,Component,ElementRef,AfterViewChecked,AfterContentInit,Input,Output,ContentChildren,QueryList,TemplateRef,EventEmitter,ViewChild,ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ButtonModule} from 'primeng/button';
-import {SharedModule,PrimeTemplate,FilterService} from 'primeng/api';
-import {DomHandler} from 'primeng/dom';
-import {ObjectUtils, UniqueComponentId} from 'primeng/utils';
-import {RippleModule} from 'primeng/ripple';
+import {ButtonModule} from 'primeng-11/button';
+import {SharedModule,PrimeTemplate,FilterService} from 'primeng-11/api';
+import {DomHandler} from 'primeng-11/dom';
+import {ObjectUtils, UniqueComponentId} from 'primeng-11/utils';
+import {RippleModule} from 'primeng-11/ripple';
 import {CdkDragDrop, DragDropModule, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
@@ -406,7 +406,7 @@ export class OrderList implements AfterViewChecked,AfterContentInit {
                     }
                 }
             `;
-            
+
             this.styleElement.innerHTML = innerHTML;
         }
     }

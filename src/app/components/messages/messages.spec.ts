@@ -3,10 +3,10 @@ import { By } from '@angular/platform-browser';
 import { Messages } from './messages';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
-import { Button } from 'primeng/button';
+import { Button } from 'primeng-11/button';
 import { FormsModule } from '@angular/forms';
-import { MessageService } from 'primeng/api';
-import { Message } from 'primeng/api';
+import { MessageService } from 'primeng-11/api';
+import { Message } from 'primeng-11/api';
 
 @Component({
     template: `

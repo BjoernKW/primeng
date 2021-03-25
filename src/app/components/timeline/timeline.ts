@@ -1,11 +1,11 @@
 import {NgModule ,Component, Input, ElementRef, ChangeDetectionStrategy, ViewEncapsulation, AfterContentInit, ContentChildren, QueryList, TemplateRef} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {BlockableUI, PrimeTemplate} from 'primeng/api';
+import {BlockableUI, PrimeTemplate} from 'primeng-11/api';
 
 @Component({
     selector: 'p-timeline',
     template: `
-        <div [class]="styleClass" [ngStyle]="style" [ngClass]="{'p-timeline p-component': true, 
+        <div [class]="styleClass" [ngStyle]="style" [ngClass]="{'p-timeline p-component': true,
                 'p-timeline-left': align === 'left',
                 'p-timeline-right': align === 'right',
                 'p-timeline-top': align === 'top',

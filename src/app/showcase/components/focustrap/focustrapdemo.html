@@ -8,11 +8,11 @@
 <div class="content-section implementation">
     <div pFocusTrap class="card">
         <h5>Input</h5>
-        <input id="input" type="text" size="30" pInputText> 
-        
+        <input id="input" type="text" size="30" pInputText>
+
         <h5>Float Label</h5>
         <span class="p-float-label">
-            <input id="float-input" type="text" size="30" pInputText> 
+            <input id="float-input" type="text" size="30" pInputText>
             <label for="float-input">Username</label>
         </span>
 
@@ -30,11 +30,11 @@
 
         <h5>Button with tabindex -1</h5>
         <button pButton type="button" icon="pi pi-check" tabindex="-1"  label="Check"></button>
-        
+
         <h5>Dropdown</h5>
         <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" optionLabel="name" [showClear]="true"></p-dropdown>
 
-        <h5>Editor</h5>   
+        <h5>Editor</h5>
         <p-editor [style]="{'height':'320px'}">
             <ng-template pTemplate="header">
                 <span class="ql-formats">
@@ -52,7 +52,7 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;FocusTrapModule&#125; from 'primeng/focustrap';
+import &#123;FocusTrapModule&#125; from 'primeng-11/focustrap';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -110,11 +110,11 @@ import &#123;FocusTrapModule&#125; from 'primeng/focustrap';
 &lt;div pFocusTrap&gt;
 &lt;div pFocusTrap class="card"&gt;
     &lt;h5&gt;Input&lt;/h5&gt;
-    &lt;input id="input" type="text" size="30" pInputText&gt; 
-    
+    &lt;input id="input" type="text" size="30" pInputText&gt;
+
     &lt;h5&gt;Float Label&lt;/h5&gt;
     &lt;span class="p-float-label"&gt;
-        &lt;input id="float-input" type="text" size="30" pInputText&gt; 
+        &lt;input id="float-input" type="text" size="30" pInputText&gt;
         &lt;label for="float-input"&gt;Username&lt;/label&gt;
     &lt;/span&gt;
 
@@ -132,11 +132,11 @@ import &#123;FocusTrapModule&#125; from 'primeng/focustrap';
 
     &lt;h5&gt;Button with tabindex -1&lt;/h5&gt;
     &lt;button pButton type="button" icon="pi pi-check" tabindex="-1"  label="Check"&gt;&lt;/button&gt;
-    
+
     &lt;h5&gt;Dropdown&lt;/h5&gt;
     &lt;p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" optionLabel="name" [showClear]="true"&gt;&lt;/p-dropdown&gt;
 
-    &lt;h5&gt;Editor&lt;/h5&gt;   
+    &lt;h5&gt;Editor&lt;/h5&gt;
     &lt;p-editor [style]="&#123;'height':'320px'&#125;"&gt;
         &lt;ng-template pTemplate="header"&gt;
             &lt;span class="ql-formats"&gt;
@@ -153,7 +153,7 @@ import &#123;FocusTrapModule&#125; from 'primeng/focustrap';
 export class FocusTrapDemo &#123;
 
     selectedCity: string;
-   
+
     cities = [
         &#123;name: 'New York', code: 'NY'&#123;,
         &#123;name: 'Rome', code: 'RM'&#123;,
@@ -161,7 +161,7 @@ export class FocusTrapDemo &#123;
         &#123;name: 'Istanbul', code: 'IST'&#123;,
         &#123;name: 'Paris', code: 'PRS'&#123;
     ];
-    
+
 &#125;
 </app-code>
 

@@ -2,14 +2,14 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SplitButton } from './splitbutton';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonModule } from 'primeng/button';
+import { ButtonModule } from 'primeng-11/button';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('SplitButton', () => {
-  
+
     let splitbutton: SplitButton;
     let fixture: ComponentFixture<SplitButton>;
-    
+
     beforeEach(() => {
       TestBed.configureTestingModule({
         imports: [
@@ -21,7 +21,7 @@ describe('SplitButton', () => {
           SplitButton,
         ],
       });
-      
+
       fixture = TestBed.createComponent(SplitButton);
       splitbutton = fixture.componentInstance;
     });

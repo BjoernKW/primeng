@@ -3,13 +3,13 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {FullCalendarDemo} from './fullcalendardemo';
 import {FullCalendarDemoRoutingModule} from './fullcalendardemo-routing.module';
-import {FullCalendarModule} from 'primeng/fullcalendar';
-import {DialogModule} from 'primeng/dialog';
-import {InputTextModule} from 'primeng/inputtext';
-import {CalendarModule} from 'primeng/calendar';
-import {CheckboxModule} from 'primeng/checkbox';
-import {ButtonModule} from 'primeng/button';
-import {TabViewModule} from 'primeng/tabview';
+import {FullCalendarModule} from 'primeng-11/fullcalendar';
+import {DialogModule} from 'primeng-11/dialog';
+import {InputTextModule} from 'primeng-11/inputtext';
+import {CalendarModule} from 'primeng-11/calendar';
+import {CheckboxModule} from 'primeng-11/checkbox';
+import {ButtonModule} from 'primeng-11/button';
+import {TabViewModule} from 'primeng-11/tabview';
 import { AppCodeModule } from '../../app.code.component';
 
 @NgModule({

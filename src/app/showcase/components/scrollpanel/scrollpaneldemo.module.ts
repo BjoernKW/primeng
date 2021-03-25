@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ScrollPanelDemo} from './scrollpaneldemo';
-import {ScrollPanelModule} from 'primeng/scrollpanel';
+import {ScrollPanelModule} from 'primeng-11/scrollpanel';
 import {ScrollPanelDemoRoutingModule} from './scrollpaneldemo-routing.module';
-import {TabViewModule} from 'primeng/tabview';
+import {TabViewModule} from 'primeng-11/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

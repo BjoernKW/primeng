@@ -31,15 +31,15 @@
         <h5>Inline Message</h5>
         <p>p-message component is used to display inline messages mostly within forms.</p>
         <p-message severity="info" text="Message Content" styleClass="p-mr-2"></p-message>
-        <p-message severity="success" text="Message Content" styleClass="p-mr-2"></p-message>  
-        <p-message severity="warn" text="Message Content" styleClass="p-mr-2"></p-message>  
+        <p-message severity="success" text="Message Content" styleClass="p-mr-2"></p-message>
+        <p-message severity="warn" text="Message Content" styleClass="p-mr-2"></p-message>
         <p-message severity="error" text="Message Content"></p-message>
-        
+
         <div class="p-mt-4">
             <input type="text" pInputText placeholder="Username" class="ng-dirty ng-invalid p-mr-2">
             <p-message severity="error" text="Field is required"></p-message>
         </div>
-        
+
         <div class="p-mt-4">
             <input type="text" pInputText placeholder="Email" class="ng-dirty ng-invalid p-mr-2">
             <p-message severity="error"></p-message>
@@ -51,7 +51,7 @@
             <input id="username" type="username" aria-describedby="username-help" class="ng-invalid ng-dirty" pInputText />
             <small id="username-help" class="p-error">Username is not available.</small>
         </div>
-    </div>    
+    </div>
 </div>
 
 <div class="content-section documentation">
@@ -60,19 +60,19 @@
             <h5>Import</h5>
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;MessagesModule&#125; from 'primeng/messages';
-import &#123;MessageModule&#125; from 'primeng/message';
+import &#123;MessagesModule&#125; from 'primeng-11/messages';
+import &#123;MessageModule&#125; from 'primeng-11/message';
 </app-code>
 
             <h5>Getting Started</h5>
             <p>A single message is specified by Message interface in PrimeNG that defines the id, severity, summary and detail as the properties.
-                Messages to display can either be defined using the value property which should an array of Message instances or using 
+                Messages to display can either be defined using the value property which should an array of Message instances or using
                a MessageService are defined using the value property which should an array of Message instances.</p>
 
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-messages [(value)]="msgs"&gt;&lt;/p-messages&gt;
 </app-code>
-            
+
             <h5>Message Array</h5>
             <p>A binding to the value property is required to provide messages to the component.</p>
 
@@ -95,18 +95,18 @@ hide() &#123;
 
             <h5>Message Service</h5>
             <p>MessageService alternative does not require a value binding to an array.
-            In order to use this service, import the class and define it as a provider in a component higher up in the component tree such as application instance itself 
+            In order to use this service, import the class and define it as a provider in a component higher up in the component tree such as application instance itself
             so that descandant components can have it injected. If there are multiple message components having the same message service, you may use key property of the component
             to match the key of the message to implement scoping.</p>
-            
+
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;MessageService&#125; from 'primeng/api';
+import &#123;MessageService&#125; from 'primeng-11/api';
 </app-code>
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 import &#123;Component&#125; from '@angular/core';
-import &#123;Message&#125; from 'primeng//api';
-import &#123;MessageService&#125; from 'primeng/api';
+import &#123;Message&#125; from 'primeng-11//api';
+import &#123;MessageService&#125; from 'primeng-11/api';
 
 @Component(&#123;
     templateUrl: './messagesdemo.html'
@@ -123,7 +123,7 @@ import &#123;MessageService&#125; from 'primeng/api';
             this.messageService.addAll([&#123;severity:'success', summary:'Service Message', detail:'Via MessageService'&#125;,
                             &#123;severity:'info', summary:'Info Message', detail:'Via MessageService'&#125;]);
         &#125;
-        
+
         clear() &#123;
             this.messageService.clear();
         &#125;
@@ -168,18 +168,18 @@ import &#123;MessageService&#125; from 'primeng/api';
     &lt;/ng-template&gt;
 &lt;/p-messages&gt;
 </app-code>
-            
+
             <h5>Message Component</h5>
             <p>Message component is useful in cases where messages need to be displayed related to an element such as forms. It has two property, severity and text of the message.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-message severity="info" text="Message Content"&gt;&lt;/p-message&gt;
-&lt;p-message severity="success" text="Message Content"&gt;&lt;/p-message&gt;  
-&lt;p-message severity="warn" text="Message Content"&gt;&lt;/p-message&gt;  
+&lt;p-message severity="success" text="Message Content"&gt;&lt;/p-message&gt;
+&lt;p-message severity="warn" text="Message Content"&gt;&lt;/p-message&gt;
 &lt;p-message severity="error" text="Message Content"&gt;&lt;/p-message&gt;
 </app-code>
 
             <h5>Animation Configuration</h5>
-            <p>Transition of the open and hide animations can be customized using the <i>showTransitionOptions</i> and <i>hideTransitionOptions</i> properties, 
+            <p>Transition of the open and hide animations can be customized using the <i>showTransitionOptions</i> and <i>hideTransitionOptions</i> properties,
                 example below disables the animations altogether.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-message [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'" severity="info" text="PrimeNG Rocks"&gt;&lt;/p-message&gt;
@@ -439,8 +439,8 @@ import &#123;MessageService&#125; from 'primeng/api';
 &lt;h5&gt;Inline Message&lt;/h5&gt;
 &lt;p&gt;p-message component is used to display inline messages mostly within forms.&lt;/p&gt;
 &lt;p-message severity="info" text="Message Content" styleClass="p-mr-2"&gt;&lt;/p-message&gt;
-&lt;p-message severity="success" text="Message Content" styleClass="p-mr-2"&gt;&lt;/p-message&gt;  
-&lt;p-message severity="warn" text="Message Content" styleClass="p-mr-2"&gt;&lt;/p-message&gt;  
+&lt;p-message severity="success" text="Message Content" styleClass="p-mr-2"&gt;&lt;/p-message&gt;
+&lt;p-message severity="warn" text="Message Content" styleClass="p-mr-2"&gt;&lt;/p-message&gt;
 &lt;p-message severity="error" text="Message Content"&gt;&lt;/p-message&gt;
 
 &lt;div class="p-mt-4"&gt;
@@ -463,18 +463,18 @@ import &#123;MessageService&#125; from 'primeng/api';
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
     import &#123;Component, OnInit&#125; from '@angular/core';
-    import &#123;Message,MessageService&#125; from 'primeng/api';
-    
+    import &#123;Message,MessageService&#125; from 'primeng-11/api';
+
     @Component(&#123;
         templateUrl: './messagesdemo.html',
         providers: [MessageService]
     &#125;)
     export class MessagesDemo implements OnInit &#123;
-    
+
         msgs1: Message[];
 
         msgs2: Message[];
-        
+
         constructor(private messageService: MessageService) &#123;&#125;
 
         ngOnInit() &#123;
@@ -486,7 +486,7 @@ import &#123;MessageService&#125; from 'primeng/api';
                 &#123;severity:'custom', summary:'Custom', detail:'Message Content', icon: 'pi-file'&#125;
             ];
         &#125;
-        
+
         addMessages() &#123;
             this.msgs2 = [
                 &#123;severity:'success', summary:'Success', detail:'Message Content'&#125;,

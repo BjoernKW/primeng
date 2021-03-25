@@ -1,12 +1,12 @@
 import { NgModule, Component, ChangeDetectionStrategy, ViewEncapsulation, Input, TemplateRef, ContentChildren, QueryList, ElementRef, Output, EventEmitter, ViewChild, forwardRef, ChangeDetectorRef, Renderer2, OnDestroy, OnInit, AfterContentInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule, PrimeTemplate } from 'primeng/api';
-import { ObjectUtils } from 'primeng/utils';
-import { DomHandler } from 'primeng/dom';
+import { SharedModule, PrimeTemplate } from 'primeng-11/api';
+import { ObjectUtils } from 'primeng-11/utils';
+import { DomHandler } from 'primeng-11/dom';
 import { trigger,style,transition,animate,AnimationEvent} from '@angular/animations';
-import { ConnectedOverlayScrollHandler } from 'primeng/dom';
+import { ConnectedOverlayScrollHandler } from 'primeng-11/dom';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { RippleModule } from 'primeng/ripple';
+import { RippleModule } from 'primeng-11/ripple';
 
 export const CASCADESELECT_VALUE_ACCESSOR: any = {
     provide: NG_VALUE_ACCESSOR,
@@ -149,7 +149,7 @@ export class CascadeSelectSub implements OnInit {
 
     getItemClass(option) {
         return {
-            'p-cascadeselect-item': true, 
+            'p-cascadeselect-item': true,
             'p-cascadeselect-item-group': this.isOptionGroup(option),
             'p-cascadeselect-item-active p-highlight': this.isOptionActive(option)
         }
@@ -241,12 +241,12 @@ export class CascadeSelectSub implements OnInit {
             <div class="p-cascadeselect-trigger" role="button" aria-haspopup="listbox" [attr.aria-expanded]="overlayVisible">
                 <span class="p-cascadeselect-trigger-icon pi pi-chevron-down"></span>
             </div>
-            <div class="p-cascadeselect-panel p-component" *ngIf="overlayVisible" 
+            <div class="p-cascadeselect-panel p-component" *ngIf="overlayVisible"
                 [@overlayAnimation]="{value: 'visible', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}" (@overlayAnimation.start)="onOverlayAnimationStart($event)" (@overlayAnimation.done)="onOverlayAnimationDone($event)">
                 <div class="p-cascadeselect-items-wrapper">
-                    <p-cascadeSelectSub [options]="options" [selectionPath]="selectionPath" class="p-cascadeselect-items" 
+                    <p-cascadeSelectSub [options]="options" [selectionPath]="selectionPath" class="p-cascadeselect-items"
                         [optionLabel]="optionLabel" [optionValue]="optionValue" [level]="0" [optionTemplate]="optionTemplate"
-                        [optionGroupLabel]="optionGroupLabel" [optionGroupChildren]="optionGroupChildren" 
+                        [optionGroupLabel]="optionGroupLabel" [optionGroupChildren]="optionGroupChildren"
                         (onSelect)="onOptionSelect($event)" (onGroupSelect)="onOptionGroupSelect($event)" [dirty]="dirty" [root]="true">
                     </p-cascadeSelectSub>
                 </div>
@@ -290,7 +290,7 @@ export class CascadeSelect implements OnInit, AfterContentInit, OnDestroy {
     @Input() optionGroupChildren: any[];
 
     @Input() placeholder: string;
-    
+
     @Input() value: string;
 
     @Input() dataKey: string;
@@ -298,7 +298,7 @@ export class CascadeSelect implements OnInit, AfterContentInit, OnDestroy {
     @Input() inputId: string;
 
     @Input() tabindex: string;
-    
+
     @Input() ariaLabelledBy: string;
 
     @Input() appendTo: any;
@@ -344,9 +344,9 @@ export class CascadeSelect implements OnInit, AfterContentInit, OnDestroy {
     optionTemplate: TemplateRef<any>;
 
     outsideClickListener: any;
-    
+
     scrollHandler: any;
-    
+
     resizeListener: any;
 
     overlayEl: any;
@@ -415,7 +415,7 @@ export class CascadeSelect implements OnInit, AfterContentInit, OnDestroy {
             }
         }
 
-        this.selectionPath = path;   
+        this.selectionPath = path;
         this.updateFilledState();
     }
 
@@ -437,7 +437,7 @@ export class CascadeSelect implements OnInit, AfterContentInit, OnDestroy {
         else if ((ObjectUtils.equals(this.value, this.getOptionValue(option), this.dataKey))) {
             return [option];
         }
-        
+
         return null;
     }
 

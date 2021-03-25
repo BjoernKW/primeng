@@ -1,8 +1,8 @@
 import {Component,OnInit} from '@angular/core';
 import {NodeService} from '../../service/nodeservice';
-import {TreeNode} from 'primeng/api';
-import {TreeDragDropService} from 'primeng/api';
-import {MessageService} from 'primeng/api';
+import {TreeNode} from 'primeng-11/api';
+import {TreeDragDropService} from 'primeng-11/api';
+import {MessageService} from 'primeng-11/api';
 
 @Component({
     templateUrl: './treedragdropdemo.html',
@@ -23,7 +23,7 @@ export class TreeDragDropDemo implements OnInit {
     files3: TreeNode[];
 
     files4: TreeNode[];
-    
+
     constructor(private nodeService: NodeService) { }
 
     ngOnInit() {

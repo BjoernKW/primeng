@@ -1,10 +1,10 @@
 import {NgModule,Component,OnInit,Input,Output,ChangeDetectorRef,EventEmitter,TemplateRef,OnChanges,SimpleChanges,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {DropdownModule} from 'primeng/dropdown';
-import {SelectItem} from 'primeng/api';
-import {RippleModule} from 'primeng/ripple';
-import {SharedModule} from 'primeng/api';
+import {DropdownModule} from 'primeng-11/dropdown';
+import {SelectItem} from 'primeng-11/api';
+import {RippleModule} from 'primeng-11/ripple';
+import {SharedModule} from 'primeng-11/api';
 
 @Component({
     selector: 'p-paginator',
@@ -67,9 +67,9 @@ export class Paginator implements OnInit, OnChanges {
     @Input() styleClass: string;
 
     @Input() alwaysShow: boolean = true;
-    
+
     @Input() templateLeft: TemplateRef<any>;
-    
+
     @Input() templateRight: TemplateRef<any>;
 
     @Input() dropdownAppendTo: any;
@@ -85,7 +85,7 @@ export class Paginator implements OnInit, OnChanges {
     @Input() totalRecords: number = 0;
 
     @Input() rows: number = 0;
-    
+
     @Input() rowsPerPageOptions: any[];
 
     @Input() showJumpToPageDropdown: boolean;
@@ -99,7 +99,7 @@ export class Paginator implements OnInit, OnChanges {
     pageItems: SelectItem[];
 
     rowsPerPageItems: SelectItem[];
-    
+
     paginatorState: any;
 
     _first: number = 0;
@@ -107,7 +107,7 @@ export class Paginator implements OnInit, OnChanges {
     _page: number = 0;
 
     constructor(private cd: ChangeDetectorRef) {}
-    
+
     ngOnInit() {
         this.updatePaginatorState();
     }
@@ -269,7 +269,7 @@ export class Paginator implements OnInit, OnChanges {
     onPageDropdownChange(event) {
         this.changePage(event.value);
     }
-    
+
     updatePaginatorState() {
         this.paginatorState = {
             page: this.getPage(),

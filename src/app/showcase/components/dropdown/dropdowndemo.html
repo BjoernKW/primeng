@@ -10,10 +10,10 @@
     <div class="card">
         <h5>Basic</h5>
         <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" placeholder="Select a City" optionLabel="name" [showClear]="true"></p-dropdown>
-    
+
         <h5>Editable</h5>
         <p-dropdown [options]="cities" [(ngModel)]="selectedCity2" editable="true" optionLabel="name"></p-dropdown>
-    
+
         <h5>Group</h5>
         <p-dropdown [options]="groupedCities" [(ngModel)]="selectedCity3" placeholder="Select a City" [group]="true">
             <ng-template let-group pTemplate="group">
@@ -39,7 +39,7 @@
                 </div>
             </ng-template>
         </p-dropdown>
-    
+
         <h5>Virtual Scroll (10000 Items)</h5>
         <p-dropdown [options]="items" [(ngModel)]="item" placeholder="Select Item" [virtualScroll]="true" [itemSize]="31" [filter]="false"></p-dropdown>
     </div>
@@ -56,7 +56,7 @@ npm install @angular/cdk --save
 
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;DropdownModule&#125; from 'primeng/dropdown';
+import &#123;DropdownModule&#125; from 'primeng-11/dropdown';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -748,7 +748,7 @@ export class DropdownDemo &#123;
 
         this.groupedCities = [
             &#123;
-                label: 'Germany', value: 'de', 
+                label: 'Germany', value: 'de',
                 items: [
                     &#123;label: 'Berlin', value: 'Berlin'&#125;,
                     &#123;label: 'Frankfurt', value: 'Frankfurt'&#125;,
@@ -757,7 +757,7 @@ export class DropdownDemo &#123;
                 ]
             &#125;,
             &#123;
-                label: 'USA', value: 'us', 
+                label: 'USA', value: 'us',
                 items: [
                     &#123;label: 'Chicago', value: 'Chicago'&#125;,
                     &#123;label: 'Los Angeles', value: 'Los Angeles'&#125;,
@@ -766,7 +766,7 @@ export class DropdownDemo &#123;
                 ]
             &#125;,
             &#123;
-                label: 'Japan', value: 'jp', 
+                label: 'Japan', value: 'jp',
                 items: [
                     &#123;label: 'Kyoto', value: 'Kyoto'&#125;,
                     &#123;label: 'Osaka', value: 'Osaka'&#125;,
@@ -819,7 +819,7 @@ export class CountryService &#123;
 &#125;
 </app-code>
         </p-tabPanel>
-        
+
         <p-tabPanel header="StackBlitz">
             <ng-template pTemplate="content">
                 <iframe src="https://stackblitz.com/edit/primeng-dropdown-demo?embed=1" style="width: 100%; height: 768px; border: none;"></iframe>

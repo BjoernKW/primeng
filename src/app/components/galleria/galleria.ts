@@ -1,9 +1,9 @@
 import {NgModule,Component,ElementRef,OnDestroy,Input,Output,EventEmitter,ChangeDetectionStrategy, ViewChild, ContentChildren, QueryList, TemplateRef, OnInit, OnChanges, AfterContentChecked, SimpleChanges, ViewEncapsulation, ChangeDetectorRef, AfterViewInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import { SharedModule, PrimeTemplate } from 'primeng/api';
-import { UniqueComponentId } from 'primeng/utils';
-import { DomHandler } from 'primeng/dom';
-import { RippleModule } from 'primeng/ripple';  
+import { SharedModule, PrimeTemplate } from 'primeng-11/api';
+import { UniqueComponentId } from 'primeng-11/utils';
+import { DomHandler } from 'primeng-11/dom';
+import { RippleModule } from 'primeng-11/ripple';
 
 @Component({
     selector: 'p-galleria',
@@ -89,7 +89,7 @@ export class Galleria implements OnChanges, OnDestroy {
     @Output() activeIndexChange: EventEmitter<any> = new EventEmitter();
 
     @Output() visibleChange: EventEmitter<any> = new EventEmitter();
-    
+
 	@ContentChildren(PrimeTemplate) templates: QueryList<any>;
 
 
@@ -140,7 +140,7 @@ export class Galleria implements OnChanges, OnDestroy {
             }
         }
     }
-    
+
     onMaskHide() {
         this.visible = false;
         this.visibleChange.emit(false);
@@ -163,7 +163,7 @@ export class Galleria implements OnChanges, OnDestroy {
 @Component({
     selector: 'p-galleriaContent',
     template: `
-        <div [attr.id]="id" *ngIf="value && value.length > 0" [ngClass]="{'p-galleria p-component': true, 'p-galleria-fullscreen': this.galleria.fullScreen, 
+        <div [attr.id]="id" *ngIf="value && value.length > 0" [ngClass]="{'p-galleria p-component': true, 'p-galleria-fullscreen': this.galleria.fullScreen,
             'p-galleria-indicator-onitem': this.galleria.showIndicatorsOnItem, 'p-galleria-item-nav-onhover': this.galleria.showItemNavigatorsOnHover && !this.galleria.fullScreen}"
             [ngStyle]="!galleria.fullScreen ? galleria.containerStyle : {}" [class]="galleriaClass()">
             <button *ngIf="galleria.fullScreen" type="button" class="p-galleria-close p-link" (click)="maskHide.emit()" pRipple>
@@ -173,7 +173,7 @@ export class Galleria implements OnChanges, OnDestroy {
                 <p-galleriaItemSlot type="header" [templates]="galleria.templates"></p-galleriaItemSlot>
             </div>
             <div class="p-galleria-content">
-                <p-galleriaItem [value]="value" [activeIndex]="activeIndex" [circular]="galleria.circular" [templates]="galleria.templates" (onActiveIndexChange)="onActiveIndexChange($event)" 
+                <p-galleriaItem [value]="value" [activeIndex]="activeIndex" [circular]="galleria.circular" [templates]="galleria.templates" (onActiveIndexChange)="onActiveIndexChange($event)"
                     [showIndicators]="galleria.showIndicators" [changeItemOnIndicatorHover]="galleria.changeItemOnIndicatorHover" [indicatorFacet]="galleria.indicatorFacet"
                     [captionFacet]="galleria.captionFacet" [showItemNavigators]="galleria.showItemNavigators" [autoPlay]="galleria.autoPlay" [slideShowActive]="slideShowActive"
                     (startSlideShow)="startSlideShow()" (stopSlideShow)="stopSlideShow()"></p-galleriaItem>
@@ -386,7 +386,7 @@ export class GalleriaItem implements OnInit {
     @Output() startSlideShow: EventEmitter<any> = new EventEmitter();
 
     @Output() stopSlideShow: EventEmitter<any> = new EventEmitter();
-    
+
     @Output() onActiveIndexChange: EventEmitter<any> = new EventEmitter();
 
     @Input() get activeIndex(): number {
@@ -549,11 +549,11 @@ export class GalleriaThumbnails implements OnInit, AfterContentChecked, AfterVie
         this._oldactiveIndex = this._activeIndex;
         this._activeIndex = activeIndex;
     }
-    
+
     index: number;
 
     startPos = null;
-    
+
     thumbnailsStyle = null;
 
     sortedResponsiveOptions = null;
@@ -571,7 +571,7 @@ export class GalleriaThumbnails implements OnInit, AfterContentChecked, AfterVie
     _oldNumVisible: number = 0;
 
     _activeIndex: number = 0;
-    
+
     _oldactiveIndex: number = 0;
 
     constructor(private cd: ChangeDetectorRef) { }
@@ -799,7 +799,7 @@ export class GalleriaThumbnails implements OnInit, AfterContentChecked, AfterVie
             this.navBackward(e);
         }
     }
-    
+
     getTotalPageNumber() {
         return this.value.length > this.d_numVisible ? (this.value.length - this.d_numVisible) + 1 : 0;
     }

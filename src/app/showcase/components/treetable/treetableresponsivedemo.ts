@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { TreeNode } from 'primeng/api';
+import { TreeNode } from 'primeng-11/api';
 import { NodeService } from '../../service/nodeservice';
 
 @Component({
     templateUrl: './treetableresponsivedemo.html',
     styles: [`
-        :host ::ng-deep .priority-2, 
+        :host ::ng-deep .priority-2,
         :host ::ng-deep .priority-3,
         :host ::ng-deep .visibility-sm {
             display: none;

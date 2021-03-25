@@ -22,8 +22,8 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;SlideMenuModule&#125; from 'primeng/slidemenu';
-import &#123;MenuItem&#125; from 'primeng/api';
+import &#123;SlideMenuModule&#125; from 'primeng-11/slidemenu';
+import &#123;MenuItem&#125; from 'primeng-11/api';
 </app-code>
 
             <h5>MenuModel API</h5>
@@ -45,7 +45,7 @@ export class SlideMenuDemo &#123;
             &#123;
                 label: 'File',
                 items: [&#123;
-                        label: 'New', 
+                        label: 'New',
                         icon: 'pi pi-fw pi-plus',
                         items: [
                             &#123;label: 'Project'&#125;,
@@ -70,7 +70,7 @@ export class SlideMenuDemo &#123;
 </app-code>
 
             <h5>Popup Mode</h5>
-            <p>SlideMenu is inline by default, popup mode is also supported by enabling popup property and calling toggle method by passing the event 
+            <p>SlideMenu is inline by default, popup mode is also supported by enabling popup property and calling toggle method by passing the event
                     from the anchor element.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-slideMenu #menu [model]="items" [popup]="true"&gt;&lt;/p-slideMenu&gt;
@@ -78,14 +78,14 @@ export class SlideMenuDemo &#123;
 </app-code>
 
             <h5>Effects</h5>
-            <p>The easing function to use is "ease-out" by default and this can be customized using easing property. 
+            <p>The easing function to use is "ease-out" by default and this can be customized using easing property.
                 See <a href="http://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp">here</a> for possible alternative values.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-slideMenu #menu [model]="items" effectDuration="1000" easing="ease-in"&gt;&lt;/p-slideMenu&gt;
 </app-code>
 
             <h5>Animation Configuration</h5>
-            <p>Transition of the open and hide animations can be customized using the showTransitionOptions and hideTransitionOptions properties, 
+            <p>Transition of the open and hide animations can be customized using the showTransitionOptions and hideTransitionOptions properties,
                 example below disables the animations altogether.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-slideMenu [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'" #menu [model]="items" [popup]="true"&gt;&lt;/p-slideMenu&gt;
@@ -191,7 +191,7 @@ export class SlideMenuDemo &#123;
                     </tbody>
                 </table>
             </div>
-            
+
             <h5>Methods</h5>
             <div class="doc-tablewrapper">
                 <table class="doc-table">

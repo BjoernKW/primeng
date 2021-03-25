@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer, Representative } from '../../domain/customer';
 import { CustomerService } from '../../service/customerservice';
-import { LazyLoadEvent } from 'primeng/api';
+import { LazyLoadEvent } from 'primeng-11/api';
 
 @Component({
     templateUrl: './tablelazydemo.html'
@@ -15,7 +15,7 @@ export class TableLazyDemo implements OnInit {
     cols: any[];
 
     loading: boolean;
-    
+
     representatives: Representative[];
 
     constructor(private customerService: CustomerService) { }
@@ -37,7 +37,7 @@ export class TableLazyDemo implements OnInit {
         this.loading = true;
     }
 
-    loadCustomers(event: LazyLoadEvent) {  
+    loadCustomers(event: LazyLoadEvent) {
         this.loading = true;
 
         setTimeout(() => {

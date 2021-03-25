@@ -3,11 +3,11 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {VirtualScrollerDemo} from './virtualscrollerdemo';
 import {VirtualScrollerDemoRoutingModule} from './virtualscrollerdemo-routing.module';
-import {VirtualScrollerModule} from 'primeng/virtualscroller';
-import {ButtonModule} from 'primeng/button';
-import {InputTextModule} from 'primeng/inputtext';
-import {DropdownModule} from 'primeng/dropdown';
-import {TabViewModule} from 'primeng/tabview';
+import {VirtualScrollerModule} from 'primeng-11/virtualscroller';
+import {ButtonModule} from 'primeng-11/button';
+import {InputTextModule} from 'primeng-11/inputtext';
+import {DropdownModule} from 'primeng-11/dropdown';
+import {TabViewModule} from 'primeng-11/tabview';
 import { AppCodeModule } from '../../app.code.component';
 
 @NgModule({

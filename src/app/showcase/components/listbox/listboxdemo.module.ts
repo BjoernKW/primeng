@@ -5,9 +5,9 @@ import {ListboxDemo} from './listboxdemo';
 import {ListboxDemoRoutingModule} from './listboxdemo-routing.module';
 import {AppInputStyleSwitchModule} from '../../app.inputstyleswitch.component';
 import {AppCodeModule} from '../../app.code.component';
-import {ListboxModule} from 'primeng/listbox';
-import {ButtonModule} from 'primeng/button';
-import {TabViewModule} from 'primeng/tabview';
+import {ListboxModule} from 'primeng-11/listbox';
+import {ButtonModule} from 'primeng-11/button';
+import {TabViewModule} from 'primeng-11/tabview';
 
 @NgModule({
 	imports: [

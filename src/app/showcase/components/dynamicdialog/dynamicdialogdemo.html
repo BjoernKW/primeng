@@ -18,7 +18,7 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;DynamicDialogModule&#125; from 'primeng/dynamicdialog';
+import &#123;DynamicDialogModule&#125; from 'primeng-11/dynamicdialog';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -51,7 +51,7 @@ export class DynamicDialogDemoModule &#123;
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 import &#123;Component&#125; from '@angular/core';
-import &#123;DialogService&#125; from 'primeng/dynamicdialog';
+import &#123;DialogService&#125; from 'primeng-11/dynamicdialog';
 import &#123;CarsListDemo&#125; from './carslistdemo';
 import &#123;Car&#125; from '../../components/domain/car';
 
@@ -67,7 +67,7 @@ export class DynamicDialogDemo &#123;
 </app-code>
 
             <p>Displaying a dialog is done with the open method where the first parameter is the type of component to load and the second parameter is the configuration of the Dialog such as header, width and more.</p>
-                
+
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;button type="button" (click)="show()" pButton icon="pi pi-info-circle" label="Show"&gt;&lt;/button&gt;
 </app-code>
@@ -100,8 +100,8 @@ show() &#123;
 import &#123;Component&#125; from '@angular/core';
 import &#123;Car&#125; from '../../components/domain/car';
 import &#123;CarService&#125; from '../../service/carservice';
-import &#123;DynamicDialogRef&#125; from 'primeng/dynamicdialog';
-import &#123;DynamicDialogConfig&#125; from 'primeng/dynamicdialog';
+import &#123;DynamicDialogRef&#125; from 'primeng-11/dynamicdialog';
+import &#123;DynamicDialogConfig&#125; from 'primeng-11/dynamicdialog';
 
 @Component(&#123;
     templateUrl: './carslistdemo.html',
@@ -109,7 +109,7 @@ import &#123;DynamicDialogConfig&#125; from 'primeng/dynamicdialog';
 export class CarsListDemo &#123;
 
     cars: Car[];
-            
+
     constructor(private carService: CarService, public ref: DynamicDialogRef, public config: DynamicDialogConfig) &#123; &#125;
 
     ngOnInit() &#123;
@@ -126,8 +126,8 @@ event at the caller. Here is an example on how to close the dialog from the Cars
 import &#123;Component&#125; from '@angular/core';
 import &#123;Car&#125; from '../../components/domain/car';
 import &#123;CarService&#125; from '../../service/carservice';
-import &#123;DynamicDialogRef&#125; from 'primeng/dynamicdialog';
-import &#123;DynamicDialogConfig&#125; from 'primeng/dynamicdialog';
+import &#123;DynamicDialogRef&#125; from 'primeng-11/dynamicdialog';
+import &#123;DynamicDialogConfig&#125; from 'primeng-11/dynamicdialog';
 
 @Component(&#123;
     templateUrl: './carslistdemo.html',
@@ -135,7 +135,7 @@ import &#123;DynamicDialogConfig&#125; from 'primeng/dynamicdialog';
 export class CarsListDemo &#123;
 
     cars: Car[];
-            
+
     constructor(private carService: CarService, public ref: DynamicDialogRef, public config: DynamicDialogConfig) &#123; &#125;
 
     ngOnInit() &#123;
@@ -429,7 +429,7 @@ export class DynamicDialogDemo implements OnDestroy &#123;
 export class ProductListDemo &#123;
 
     products: Product[];
-            
+
     constructor(private productService: ProductService, public ref: DynamicDialogRef, public config: DynamicDialogConfig) &#123; &#125;
 
     ngOnInit() &#123;

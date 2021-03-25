@@ -1,8 +1,8 @@
 import {NgModule,Directive,Component,ElementRef,EventEmitter,AfterViewInit,Output,OnDestroy,Input,ChangeDetectionStrategy, ViewEncapsulation, ContentChildren, AfterContentInit, TemplateRef, QueryList} from '@angular/core';
-import {DomHandler} from 'primeng/dom';
+import {DomHandler} from 'primeng-11/dom';
 import {CommonModule} from '@angular/common';
-import {RippleModule} from 'primeng/ripple'; 
-import {PrimeTemplate} from 'primeng/api'; 
+import {RippleModule} from 'primeng-11/ripple';
+import {PrimeTemplate} from 'primeng-11/api';
 
 @Directive({
     selector: '[pButton]'
@@ -10,17 +10,17 @@ import {PrimeTemplate} from 'primeng/api';
 export class ButtonDirective implements AfterViewInit, OnDestroy {
 
     @Input() iconPos: 'left' | 'right' | 'top' | 'bottom' = 'left';
-            
+
     public _label: string;
-    
+
     public _icon: string;
-            
+
     public initialized: boolean;
-    
+
     public _initialStyleClass: string;
 
     constructor(public el: ElementRef) {}
-    
+
     ngAfterViewInit() {
         this._initialStyleClass = this.el.nativeElement.className;
         DomHandler.addMultipleClasses(this.el.nativeElement, this.getStyleClass());
@@ -36,7 +36,7 @@ export class ButtonDirective implements AfterViewInit, OnDestroy {
             DomHandler.addMultipleClasses(iconElement, this.icon);
             this.el.nativeElement.appendChild(iconElement);
         }
-        
+
         let labelElement = document.createElement("span");
         if (this.icon && !this.label) {
             labelElement.setAttribute('aria-hidden', 'true');
@@ -46,13 +46,13 @@ export class ButtonDirective implements AfterViewInit, OnDestroy {
         this.el.nativeElement.appendChild(labelElement);
         this.initialized = true;
     }
-        
+
     getStyleClass(): string {
         let styleClass = 'p-button p-component';
         if (this.icon && !this.label) {
             styleClass = styleClass + ' p-button-icon-only';
         }
-        
+
         return styleClass;
     }
 
@@ -60,27 +60,27 @@ export class ButtonDirective implements AfterViewInit, OnDestroy {
         let styleClass = this.getStyleClass();
         this.el.nativeElement.className = styleClass + ' ' + this._initialStyleClass;
     }
-    
+
     @Input() get label(): string {
         return this._label;
     }
 
     set label(val: string) {
         this._label = val;
-        
+
         if (this.initialized) {
             DomHandler.findSingle(this.el.nativeElement, '.p-button-label').textContent = this._label || '&nbsp;';
             this.setStyleClass();
         }
     }
-    
+
     @Input() get icon(): string {
         return this._icon;
     }
 
     set icon(val: string) {
         this._icon = val;
-        
+
         if (this.initialized) {
             if (this.iconPos)
                 DomHandler.findSingle(this.el.nativeElement, '.p-button-icon').className = 'p-button-icon p-button-icon-' + this.iconPos + ' ' + this._icon;
@@ -90,7 +90,7 @@ export class ButtonDirective implements AfterViewInit, OnDestroy {
             this.setStyleClass();
         }
     }
-    
+
     ngOnDestroy() {
         this.initialized = false;
     }
@@ -155,7 +155,7 @@ export class Button implements AfterContentInit {
                 case 'content':
                     this.contentTemplate = item.template;
                 break;
-                
+
                 default:
                     this.contentTemplate = item.template;
                 break;

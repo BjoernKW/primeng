@@ -97,7 +97,7 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;TimelineModule&#125; from 'primeng/timeline';
+import &#123;TimelineModule&#125; from 'primeng-11/timeline';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -106,7 +106,7 @@ import &#123;TimelineModule&#125; from 'primeng/timeline';
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 import &#123;Component,OnInit&#125; from '@angular/core';
-import &#123;PrimeIcons&#125; from 'primeng/api';
+import &#123;PrimeIcons&#125; from 'primeng-11/api';
 
 @Component(&#123;
     templateUrl: './timelinedemo.html'
@@ -114,7 +114,7 @@ import &#123;PrimeIcons&#125; from 'primeng/api';
 export class TimelineDemo implements OnInit &#123;
 
     events: any[];
-    
+
     ngOnInit() &#123;
         this.events = [
             &#123;status: 'Ordered', date: '15/10/2020 10:30', icon: PrimeIcons.SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg'&#125;,
@@ -178,7 +178,7 @@ export class TimelineDemo implements OnInit &#123;
 
             <h5>Custom Markers</h5>
             <p><i>marker</i> template allows placing a custom event marker instead of the default one. Below is an example with custom markers and content.</p>
-          
+
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-timeline [value]="events1" align="alternate"&gt;
     &lt;ng-template pTemplate="marker" let-event&gt;
@@ -414,7 +414,7 @@ export class TimelineDemo implements OnInit &#123;
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 import &#123;Component,OnInit&#125; from '@angular/core';
-import &#123;PrimeIcons&#125; from 'primeng/api';
+import &#123;PrimeIcons&#125; from 'primeng-11/api';
 
 @Component(&#123;
     templateUrl: './timelinedemo.html',
@@ -423,9 +423,9 @@ import &#123;PrimeIcons&#125; from 'primeng/api';
 export class TimelineDemo implements OnInit &#123;
 
     events1: any[];
-    
+
     events2: any[];
-    
+
     ngOnInit() &#123;
         this.events1 = [
             &#123;status: 'Ordered', date: '15/10/2020 10:30', icon: PrimeIcons.SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg'&#125;,
@@ -465,7 +465,7 @@ export class TimelineDemo implements OnInit &#123;
         .customized-timeline &#123;
             .p-timeline-event:nth-child(even) &#123;
                 flex-direction: row !important;
-                
+
                 .p-timeline-event-content &#123;
                     text-align: left !important;
                 &#125;

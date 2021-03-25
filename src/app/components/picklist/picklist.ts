@@ -1,11 +1,11 @@
 import { NgModule, Component, ElementRef, AfterContentInit, AfterViewChecked, Input, Output, ContentChildren, QueryList, TemplateRef, EventEmitter, ViewChild, ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ButtonModule} from 'primeng/button';
-import {SharedModule,PrimeTemplate,FilterService} from 'primeng/api';
-import {DomHandler} from 'primeng/dom';
-import {RippleModule} from 'primeng/ripple';
+import {ButtonModule} from 'primeng-11/button';
+import {SharedModule,PrimeTemplate,FilterService} from 'primeng-11/api';
+import {DomHandler} from 'primeng-11/dom';
+import {RippleModule} from 'primeng-11/ripple';
 import {CdkDragDrop, DragDropModule, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
-import {UniqueComponentId} from 'primeng/utils';
+import {UniqueComponentId} from 'primeng-11/utils';
 
 @Component({
     selector: 'p-pickList',
@@ -27,7 +27,7 @@ import {UniqueComponentId} from 'primeng/utils';
                         <span class="p-picklist-filter-icon pi pi-search"></span>
                     </div>
                 </div>
-                
+
                 <ul #sourcelist class="p-picklist-list p-picklist-source" cdkDropList [cdkDropListData]="source" (cdkDropListDropped)="onDrop($event, SOURCE_LIST)"
                     [ngStyle]="sourceStyle" role="listbox" aria-multiselectable="multiple">
                     <ng-template ngFor let-item [ngForOf]="source" [ngForTrackBy]="sourceTrackBy || trackBy" let-i="index" let-l="last">
@@ -571,7 +571,7 @@ export class PickList implements AfterViewChecked,AfterContentInit {
                 this.onSourceReorder.emit([event.item.data]);
             else
                 this.onTargetReorder.emit([event.item.data]);
-        } 
+        }
         else {
             transferArrayItem(event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex);
 
@@ -654,39 +654,39 @@ export class PickList implements AfterViewChecked,AfterContentInit {
                 .p-picklist[${this.id}] {
                     flex-direction: column;
                 }
-            
+
                 .p-picklist[${this.id}] .p-picklist-buttons {
                     padding: var(--content-padding);
                     flex-direction: row;
                 }
-            
+
                 .p-picklist[${this.id}] .p-picklist-buttons .p-button {
                     margin-right: var(--inline-spacing);
                     margin-bottom: 0;
                 }
-            
+
                 .p-picklist[${this.id}] .p-picklist-buttons .p-button:last-child {
                     margin-right: 0;
                 }
-            
+
                 .p-picklist[${this.id}] .pi-angle-right:before {
                     content: "\\e930"
                 }
-            
+
                 .p-picklist[${this.id}] .pi-angle-double-right:before {
                     content: "\\e92c"
                 }
-            
+
                 .p-picklist[${this.id}] .pi-angle-left:before {
                     content: "\\e933"
                 }
-            
+
                 .p-picklist[${this.id}] .pi-angle-double-left:before {
                     content: "\\e92f"
                 }
             }
             `;
-            
+
             this.styleElement.innerHTML = innerHTML;
         }
     }

@@ -16,8 +16,8 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;TabMenuModule&#125; from 'primeng/tabmenu';
-import &#123;MenuItem&#125; from 'primeng/api';</app-code>
+import &#123;TabMenuModule&#125; from 'primeng-11/tabmenu';
+import &#123;MenuItem&#125; from 'primeng-11/api';</app-code>
 
             <h5>MenuModel API</h5>
             <p>TabMenu uses the common menumodel api to define its items, visit <a [routerLink]="['/menumodel']">MenuModel API</a> for details.</p>
@@ -29,7 +29,7 @@ import &#123;MenuItem&#125; from 'primeng/api';</app-code>
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 export class TabMenuDemo &#123;
-    
+
     items: MenuItem[];
 
     ngOnInit() &#123;
@@ -51,9 +51,9 @@ export class TabMenuDemo &#123;
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 export class TabMenuDemo &#123;
-    
+
     items: MenuItem[];
-    
+
     activeItem: MenuItem;
 
     ngOnInit() &#123;
@@ -64,7 +64,7 @@ export class TabMenuDemo &#123;
             &#123;label: 'Documentation', icon: 'pi pi-fw pi-file'&#125;,
             &#123;label: 'Settings', icon: 'pi pi-fw pi-cog'&#125;
         ];
-        
+
         this.activeItem = this.items[0];
     &#125;
 &#125;
@@ -119,7 +119,7 @@ export class TabMenuDemo &#123;
                     </tbody>
                 </table>
             </div>
-            
+
             <h5>Styling</h5>
             <p>Following is the list of structural style classes, for theming classes visit <a href="#" [routerLink]="['/theming']">theming page</a>.</p>
             <div class="doc-tablewrapper">
@@ -177,7 +177,7 @@ export class TabMenuDemo &#123;
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 export class TabMenuDemo &#123;
-    
+
     items: MenuItem[];
 
     activeItem: MenuItem;

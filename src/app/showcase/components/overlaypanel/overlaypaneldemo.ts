@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import { ProductService } from '../../service/productservice';
 import { Product } from '../../domain/product';
-import { MessageService } from 'primeng/api';
+import { MessageService } from 'primeng-11/api';
 
 @Component({
     templateUrl: './overlaypaneldemo.html',
@@ -11,7 +11,7 @@ import { MessageService } from 'primeng/api';
 export class OverlayPanelDemo {
 
     products: Product[];
-    
+
     selectedProduct: Product;
 
     constructor(private productService: ProductService, private messageService: MessageService) { }

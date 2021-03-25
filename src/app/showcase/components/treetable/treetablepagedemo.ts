@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NodeService } from '../../service/nodeservice';
-import { TreeNode } from 'primeng/api';
+import { TreeNode } from 'primeng-11/api';
 
 @Component({
     templateUrl: './treetablepagedemo.html'
@@ -17,14 +17,14 @@ export class TreeTablePageDemo implements OnInit {
         this.files = [];
         for(let i = 0; i < 50; i++) {
             let node = {
-                data:{  
+                data:{
                     name: 'Item ' + i,
                     size: Math.floor(Math.random() * 1000) + 1 + 'kb',
                     type: 'Type ' + i
                 },
                 children: [
                     {
-                        data: {  
+                        data: {
                             name: 'Item ' + i + ' - 0',
                             size: Math.floor(Math.random() * 1000) + 1 + 'kb',
                             type: 'Type ' + i

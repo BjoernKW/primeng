@@ -56,7 +56,7 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;DragDropModule&#125; from 'primeng/dragdrop';
+import &#123;DragDropModule&#125; from 'primeng-11/dragdrop';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -275,22 +275,22 @@ import &#123;DragDropModule&#125; from 'primeng/dragdrop';
 export class DragDropDemo &#123;
 
     availableProducts: Product[];
-    
+
     selectedProducts: Product[];
-    
+
     draggedProduct: Product;
-    
+
     constructor(private productService: ProductService) &#123; &#125;
-    
+
     ngOnInit() &#123;
         this.selectedProducts = [];
         this.productService.getProductsSmall().then(products => this.availableProducts = products);
     &#125;
-    
+
     dragStart(event,product: Product) &#123;
         this.draggedProduct = product;
     &#125;
-    
+
     drop(event) &#123;
         if (this.draggedProduct) &#123;
             let draggedProductIndex = this.findIndex(this.draggedProduct);
@@ -299,11 +299,11 @@ export class DragDropDemo &#123;
             this.draggedProduct = null;
         &#125;
     &#125;
-    
+
     dragEnd(event) &#123;
         this.draggedProduct = null;
     &#125;
-    
+
     findIndex(product: Product) &#123;
         let index = -1;
         for(let i = 0; i < this.availableProducts.length; i++) &#123;
@@ -327,7 +327,7 @@ export class DragDropDemo &#123;
     transition: border-color .2s;
 
     &.p-draggable-enter &#123;
-        border-color: var(--primary-color); 
+        border-color: var(--primary-color);
     &#125;
 &#125;
 

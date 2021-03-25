@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { TreeNode } from 'primeng/api';
+import { TreeNode } from 'primeng-11/api';
 
 @Component({
     templateUrl: './treetableflexscrolldemo.html'
 })
 export class TreeTableFlexScrollDemo {
-    
+
     virtualFiles: TreeNode[];
 
     cols: any[];
@@ -24,7 +24,7 @@ export class TreeTableFlexScrollDemo {
         let node: TreeNode = {
             data: {name: 'Node ' + i, type: 'virtual node', size: Math.ceil(Math.random() * 10000) + 'kb'},
             children: Array.from({length: children}).map((_,j) => {
-                return { 
+                return {
                     data: {name: 'Node ' + i + '.' + j, type: 'virtual child node', size: Math.ceil(Math.random() * 10000) + 'kb'}
                 }
             })

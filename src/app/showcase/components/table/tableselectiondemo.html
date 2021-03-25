@@ -34,7 +34,7 @@
     <div class="card">
         <h5>Multiple</h5>
         <p>In multiple mode, selection binding should be an array. For touch enabled devices, selection is managed by tapping and for other devices metakey or shiftkey are required. Setting metaKeySelection property as false enables multiple selection without meta key.</p>
-        
+
         <p-table [value]="products" selectionMode="multiple" [(selection)]="selectedProducts1" [metaKeySelection]="true" dataKey="code">
             <ng-template pTemplate="caption">
                 Multiple Selection with MetaKey
@@ -229,7 +229,7 @@
 &lt;div class="card"&gt;
     &lt;h5&gt;Multiple&lt;/h5&gt;
     &lt;p&gt;In multiple mode, selection binding should be an array. For touch enabled devices, selection is managed by tapping and for other devices metakey or shiftkey are required. Setting metaKeySelection property as false enables multiple selection without meta key.&lt;/p&gt;
-    
+
     &lt;p-table [value]="products" selectionMode="multiple" [(selection)]="selectedProducts1" [metaKeySelection]="true" dataKey="code"&gt;
         &lt;ng-template pTemplate="caption"&gt;
             Multiple Selection with MetaKey
@@ -389,7 +389,7 @@
 import &#123; Component, OnInit &#125; from '@angular/core';
 import &#123; Product &#125; from '../../domain/product';
 import &#123; ProductService &#125; from '../../service/productservice';
-import &#123; MessageService &#125; from 'primeng/api';
+import &#123; MessageService &#125; from 'primeng-11/api';
 
 @Component(&#123;
     templateUrl: './tableselectiondemo.html',

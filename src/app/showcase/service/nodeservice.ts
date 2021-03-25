@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { TreeNode } from 'primeng/api';
+import { TreeNode } from 'primeng-11/api';
 
 @Injectable()
 export class NodeService {

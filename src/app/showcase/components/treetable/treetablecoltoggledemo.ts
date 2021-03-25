@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { TreeNode } from 'primeng/api';
+import { TreeNode } from 'primeng-11/api';
 import { NodeService } from '../../service/nodeservice';
 
 @Component({
     templateUrl: './treetablecoltoggledemo.html'
 })
 export class TreeTableColToggleDemo {
-    
+
     files: TreeNode[];
 
     cols: any[];

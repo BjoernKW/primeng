@@ -2,12 +2,12 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {SkeletonDemo} from './skeletondemo';
 import {SkeletonDemoRoutingModule} from './skeletondemo-routing.module';
-import {ButtonModule} from 'primeng/button';
-import {PanelModule} from 'primeng/panel';
-import {TabViewModule} from 'primeng/tabview';
+import {ButtonModule} from 'primeng-11/button';
+import {PanelModule} from 'primeng-11/panel';
+import {TabViewModule} from 'primeng-11/tabview';
 import {AppCodeModule} from '../../app.code.component';
-import {SkeletonModule} from 'primeng/skeleton';
-import {TableModule} from 'primeng/table';
+import {SkeletonModule} from 'primeng-11/skeleton';
+import {TableModule} from 'primeng-11/table';
 
 @NgModule({
 	imports: [

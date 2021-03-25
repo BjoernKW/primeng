@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Message,MessageService} from 'primeng/api';
+import {Message,MessageService} from 'primeng-11/api';
 
 @Component({
     templateUrl: './messagesdemo.html',
@@ -11,7 +11,7 @@ export class MessagesDemo implements OnInit {
     msgs1: Message[];
 
     msgs2: Message[];
-    
+
     constructor(private messageService: MessageService) {}
 
     ngOnInit() {
@@ -23,7 +23,7 @@ export class MessagesDemo implements OnInit {
             {severity:'custom', summary:'Custom', detail:'Message Content', icon: 'pi-file'}
         ];
     }
-    
+
     addMessages() {
         this.msgs2 = [
             {severity:'success', summary:'Success', detail:'Message Content'},

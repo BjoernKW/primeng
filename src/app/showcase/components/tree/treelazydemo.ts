@@ -1,7 +1,7 @@
 import {Component,OnInit} from '@angular/core';
 import {NodeService} from '../../service/nodeservice';
-import {TreeNode} from 'primeng/api';
-import {MessageService} from 'primeng/api';
+import {TreeNode} from 'primeng-11/api';
+import {MessageService} from 'primeng-11/api';
 
 @Component({
     templateUrl: './treelazydemo.html',
@@ -12,7 +12,7 @@ export class TreeLazyDemo implements OnInit {
     files: TreeNode[];
 
     loading: boolean;
-    
+
     constructor(private nodeService: NodeService, private messageService: MessageService) { }
 
     ngOnInit() {

@@ -27,8 +27,8 @@
 */
 import {NgModule,Component,ElementRef,OnInit,OnDestroy,Input,forwardRef,Output,EventEmitter,ViewChild,ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {DomHandler} from 'primeng/dom';
-import {InputTextModule} from 'primeng/inputtext';
+import {DomHandler} from 'primeng-11/dom';
+import {InputTextModule} from 'primeng-11/inputtext';
 import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
 
 export const INPUTMASK_VALUE_ACCESSOR: any = {
@@ -104,7 +104,7 @@ export class InputMask implements OnInit,OnDestroy,ControlValueAccessor {
     @Output() onBlur: EventEmitter<any> = new EventEmitter();
 
     @Output() onInput: EventEmitter<any> = new EventEmitter();
-    
+
     @Output() onKeydown: EventEmitter<any> = new EventEmitter();
 
     value: any;
@@ -406,7 +406,7 @@ export class InputMask implements OnInit,OnDestroy,ControlValueAccessor {
             end;
         let iPhone = /iphone/i.test(DomHandler.getUserAgent());
         this.oldVal = this.inputViewChild.nativeElement.value;
-        
+
         this.onKeydown.emit(e);
 
         //backspace, delete, and escape get special treatment

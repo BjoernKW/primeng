@@ -2,10 +2,10 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PanelDemo} from './paneldemo';
 import {PanelDemoRoutingModule} from './paneldemo-routing.module';
-import {PanelModule} from 'primeng/panel';
-import {ToastModule} from 'primeng/toast';
-import { MenuModule } from 'primeng/menu';
-import {TabViewModule} from 'primeng/tabview';
+import {PanelModule} from 'primeng-11/panel';
+import {ToastModule} from 'primeng-11/toast';
+import { MenuModule } from 'primeng-11/menu';
+import {TabViewModule} from 'primeng-11/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

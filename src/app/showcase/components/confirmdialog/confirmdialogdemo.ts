@@ -1,14 +1,14 @@
 import {Component} from '@angular/core';
-import {ConfirmationService, ConfirmEventType, MessageService} from 'primeng/api';
+import {ConfirmationService, ConfirmEventType, MessageService} from 'primeng-11/api';
 
 @Component({
     templateUrl: './confirmdialogdemo.html',
     providers: [ConfirmationService,MessageService]
 })
 export class ConfirmDialogDemo {
-    
+
     position: string;
-    
+
     constructor(private confirmationService: ConfirmationService, private messageService: MessageService) {}
 
     confirm1() {
@@ -31,7 +31,7 @@ export class ConfirmDialogDemo {
             }
         });
     }
-    
+
     confirm2() {
         this.confirmationService.confirm({
             message: 'Do you want to delete this record?',

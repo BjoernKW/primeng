@@ -1,7 +1,7 @@
 import {Component,OnInit} from '@angular/core';
 import {NodeService} from '../../service/nodeservice';
-import {MenuItem,TreeNode} from 'primeng/api';
-import {MessageService} from 'primeng/api';
+import {MenuItem,TreeNode} from 'primeng-11/api';
+import {MessageService} from 'primeng-11/api';
 
 @Component({
     templateUrl: './treecontextmenudemo.html',
@@ -14,7 +14,7 @@ export class TreeContextMenuDemo implements OnInit {
     selectedFile: TreeNode;
 
     items: MenuItem[];
-    
+
     constructor(private nodeService: NodeService, private messageService: MessageService) { }
 
     ngOnInit() {
@@ -29,7 +29,7 @@ export class TreeContextMenuDemo implements OnInit {
     viewFile(file: TreeNode) {
         this.messageService.add({severity: 'info', summary: 'Node Details', detail: file.label});
     }
-    
+
     unselectFile() {
         this.selectedFile = null;
     }

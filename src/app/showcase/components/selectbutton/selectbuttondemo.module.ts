@@ -3,9 +3,9 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {SelectButtonDemo} from './selectbuttondemo';
 import {SelectButtonDemoRoutingModule} from './selectbuttondemo-routing.module';
-import {SelectButtonModule} from 'primeng/selectbutton';
-import {ButtonModule} from 'primeng/button';
-import {TabViewModule} from 'primeng/tabview';
+import {SelectButtonModule} from 'primeng-11/selectbutton';
+import {ButtonModule} from 'primeng-11/button';
+import {TabViewModule} from 'primeng-11/tabview';
 import { AppCodeModule } from '../../app.code.component';
 
 @NgModule({

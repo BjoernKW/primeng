@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {CountryService} from '../../service/countryservice';
-import {SelectItemGroup} from 'primeng/api';
+import {SelectItemGroup} from 'primeng-11/api';
 
 interface City {
     name: string,
@@ -25,7 +25,7 @@ export class MultiSelectDemo {
     selectedCities3: any[];
 
     selectedCities4: any[];
-    
+
     selectedCountries1: Country[];
 
     selectedCountries2: Country[];
@@ -62,7 +62,7 @@ export class MultiSelectDemo {
 
         this.groupedCities = [
             {
-                label: 'Germany', value: 'de', 
+                label: 'Germany', value: 'de',
                 items: [
                     {label: 'Berlin', value: 'Berlin'},
                     {label: 'Frankfurt', value: 'Frankfurt'},
@@ -71,7 +71,7 @@ export class MultiSelectDemo {
                 ]
             },
             {
-                label: 'USA', value: 'us', 
+                label: 'USA', value: 'us',
                 items: [
                     {label: 'Chicago', value: 'Chicago'},
                     {label: 'Los Angeles', value: 'Los Angeles'},
@@ -80,7 +80,7 @@ export class MultiSelectDemo {
                 ]
             },
             {
-                label: 'Japan', value: 'jp', 
+                label: 'Japan', value: 'jp',
                 items: [
                     {label: 'Kyoto', value: 'Kyoto'},
                     {label: 'Osaka', value: 'Osaka'},

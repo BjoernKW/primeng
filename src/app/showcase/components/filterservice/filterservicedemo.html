@@ -36,7 +36,7 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;FilterService&#125; from 'primeng/api';
+import &#123;FilterService&#125; from 'primeng-11/api';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -57,7 +57,7 @@ export class FilterServiceDemo implements OnInit &#123;
         this.filterService.filters.endsWith(value, 'NG');                          //true
         this.filterService.filters.lt(10, 20);                                     //true
         this.filterService.filters.gt(50, 20);                                     //true
-        this.filterService.filters.in(value, ['PrimeFaces', 'PrimeNG']);           //true        
+        this.filterService.filters.in(value, ['PrimeFaces', 'PrimeNG']);           //true
     &#125;
 &#125;
 </app-code>
@@ -73,7 +73,7 @@ this.filterService.register('isPrimeNumber', (value, filter): boolean => &#123;
     if (value === undefined || value === null) &#123;
         return false;
     &#125;
-    
+
     return value.toString() === filter.toString();
 &#125;);
 
@@ -269,7 +269,7 @@ this.filterService.filters['isPrimeNumber'](568985673);              //false
 import &#123; Component, OnInit &#125; from '@angular/core';
 import &#123; CarService &#125; from '../../service/carservice';
 import &#123; Car &#125; from '../../domain/car';
-import &#123; SelectItem, FilterService, FilterMatchMode &#125; from 'primeng/api';
+import &#123; SelectItem, FilterService, FilterMatchMode &#125; from 'primeng-11/api';
 
 @Component(&#123;
     templateUrl: './filterservicedemo.html'
@@ -291,11 +291,11 @@ export class FilterServiceDemo implements OnInit &#123;
             if (filter === undefined || filter === null || filter.trim() === '') &#123;
                 return true;
             &#125;
-    
+
             if (value === undefined || value === null) &#123;
                 return false;
             &#125;
-            
+
             return value.toString() === filter.toString();
         &#125;);
 

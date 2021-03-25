@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
-import {MessageService} from 'primeng/api';
+import {MessageService} from 'primeng-11/api';
 
 @Component({
     templateUrl: './toastdemo.html',
     styleUrls: ['./toastdemo.scss'],
     providers: [MessageService]
-    
+
 })
 export class ToastDemo {
 
@@ -67,7 +67,7 @@ export class ToastDemo {
     onReject() {
         this.messageService.clear('c');
     }
-    
+
     clear() {
         this.messageService.clear();
     }

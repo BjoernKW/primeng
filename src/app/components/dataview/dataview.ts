@@ -1,9 +1,9 @@
 import {NgModule,Component,ElementRef,OnInit,AfterContentInit,Input,Output,EventEmitter,ContentChild,ContentChildren,QueryList,TemplateRef,OnChanges,SimpleChanges,ChangeDetectionStrategy,ChangeDetectorRef, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ObjectUtils} from 'primeng/utils';
-import {Header,Footer,PrimeTemplate,SharedModule,FilterService} from 'primeng/api';
-import {PaginatorModule} from 'primeng/paginator';
-import {BlockableUI} from 'primeng/api';
+import {ObjectUtils} from 'primeng-11/utils';
+import {Header,Footer,PrimeTemplate,SharedModule,FilterService} from 'primeng-11/api';
+import {PaginatorModule} from 'primeng-11/paginator';
+import {BlockableUI} from 'primeng-11/api';
 
 @Component({
     selector: 'p-dataView',

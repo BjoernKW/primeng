@@ -9,12 +9,12 @@
 <div class="content-section implementation">
     <div class="card">
         <h5>Basic</h5>
-        <input type="text" pInputText [(ngModel)]="value1"> 
+        <input type="text" pInputText [(ngModel)]="value1">
         <span class="p-ml-2">{{value1}}</span>
-        
+
         <h5>Float Label</h5>
         <span class="p-float-label">
-            <input id="float-input" type="text" pInputText [(ngModel)]="value2"> 
+            <input id="float-input" type="text" pInputText [(ngModel)]="value2">
             <label for="float-input">Username</label>
         </span>
 
@@ -46,7 +46,7 @@
 
         <h5>Invalid with Float Label</h5>
         <span class="p-float-label">
-            <input id="float-input-invalid" type="text" pInputText [(ngModel)]="value6" class="ng-invalid ng-dirty"> 
+            <input id="float-input-invalid" type="text" pInputText [(ngModel)]="value6" class="ng-invalid ng-dirty">
             <label for="float-input-invalid">Username</label>
         </span>
 
@@ -67,7 +67,7 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;InputTextModule&#125; from 'primeng/inputtext';
+import &#123;InputTextModule&#125; from 'primeng-11/inputtext';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -86,7 +86,7 @@ import &#123;InputTextModule&#125; from 'primeng/inputtext';
             <p>A floating label is implemented by wrapping the input and the label inside a container with <i>.p-float-label</i> class.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;span class="p-float-label"&gt;
-    &lt;input id="float-input" type="text" pInputText&gt; 
+    &lt;input id="float-input" type="text" pInputText&gt;
     &lt;label for="float-input"&gt;Username&lt;/label&gt;
 &lt;/span&gt;
 </app-code>
@@ -97,22 +97,22 @@ import &#123;InputTextModule&#125; from 'primeng/inputtext';
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;span class="p-input-icon-left"&gt;
     &lt;i class="pi pi-search"&gt;&lt;/i&gt;
-    &lt;input type="text" pInputText [(ngModel)]="value1" placeholder="Search"&gt;         
+    &lt;input type="text" pInputText [(ngModel)]="value1" placeholder="Search"&gt;
 &lt;/span&gt;
 
 &lt;span class="p-input-icon-right"&gt;
     &lt;i class="pi pi-spin pi-spinner"&gt;&lt;/i&gt;
-    &lt;input type="text" pInputText [(ngModel)]="value2" &gt;        
-&lt;/span&gt; 
+    &lt;input type="text" pInputText [(ngModel)]="value2" &gt;
+&lt;/span&gt;
 </app-code>
 
             <h5>Sizes</h5>
             <p>2 more sizes are available in addition to a regular input, for a smaller input add <i>p-inputtext-sm</i> and for a larger one, use <i>p-inputtext-lg</i>.
             Note that these classes should be used to change the size of a particular field, for global scaling see <a href="#" [routerLink]="['/theming']">theming</a> page.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
-&lt;input type="text" pInputText class="p-inputtext-sm" placeholder="Small"&gt;         
-&lt;input type="text" pInputText class="p-inputtext-sm" placeholder="Small"&gt;         
-&lt;input type="text" pInputText class="p-inputtext-lg"  placeholder="Large"&gt;   
+&lt;input type="text" pInputText class="p-inputtext-sm" placeholder="Small"&gt;
+&lt;input type="text" pInputText class="p-inputtext-sm" placeholder="Small"&gt;
+&lt;input type="text" pInputText class="p-inputtext-lg"  placeholder="Large"&gt;
 </app-code>
 
             <p>Instead of repeating the scale classes for each input, sizing can also be applied to a group by adding the
@@ -132,7 +132,7 @@ import &#123;InputTextModule&#125; from 'primeng/inputtext';
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;div class="p-input-filled"&gt;
     &lt;input type="text" pInputText&gt;
-&lt;/div&gt;   
+&lt;/div&gt;
 </app-code>
 
             <h5>Addons</h5>
@@ -141,15 +141,15 @@ import &#123;InputTextModule&#125; from 'primeng/inputtext';
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;div class="p-inputgroup"&gt;
     &lt;span class="p-inputgroup-addon"&gt;&lt;i class="pi pi-user"&gt;&lt;/i&gt;&lt;/span&gt;
-    &lt;input type="text" pInputText placeholder="Username"&gt;         
+    &lt;input type="text" pInputText placeholder="Username"&gt;
 &lt;/div&gt;
 
 &lt;div class="p-inputgroup"&gt;
-    &lt;span class="p-inputgroup-addon"&gt;&lt;i class="pi pi-tags"&gt;&lt;/i&gt;&lt;/span&gt;  
-    &lt;span class="p-inputgroup-addon"&gt;&lt;i class="pi pi-shopping-cart"&gt;&lt;/i&gt;&lt;/span&gt;   
-    &lt;input type="text" pInputText placeholder="Price"&gt; 
-    &lt;span class="p-inputgroup-addon"&gt;$&lt;/span&gt;  
-    &lt;span class="p-inputgroup-addon"&gt;.00&lt;/span&gt;      
+    &lt;span class="p-inputgroup-addon"&gt;&lt;i class="pi pi-tags"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class="p-inputgroup-addon"&gt;&lt;i class="pi pi-shopping-cart"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;input type="text" pInputText placeholder="Price"&gt;
+    &lt;span class="p-inputgroup-addon"&gt;$&lt;/span&gt;
+    &lt;span class="p-inputgroup-addon"&gt;.00&lt;/span&gt;
 &lt;/div&gt;
 </app-code>
 
@@ -206,12 +206,12 @@ import &#123;InputTextModule&#125; from 'primeng/inputtext';
             </a>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;h5&gt;Basic&lt;/h5&gt;
-&lt;input type="text" pInputText [(ngModel)]="value1"&gt; 
+&lt;input type="text" pInputText [(ngModel)]="value1"&gt;
 &lt;span class="p-ml-2"&gt;&#123;&#123;value1&#125;&#125;&lt;/span&gt;
 
 &lt;h5&gt;Float Label&lt;/h5&gt;
 &lt;span class="p-float-label"&gt;
-    &lt;input id="float-input" type="text" pInputText [(ngModel)]="value2"&gt; 
+    &lt;input id="float-input" type="text" pInputText [(ngModel)]="value2"&gt;
     &lt;label for="float-input"&gt;Username&lt;/label&gt;
 &lt;/span&gt;
 
@@ -243,7 +243,7 @@ import &#123;InputTextModule&#125; from 'primeng/inputtext';
 
 &lt;h5&gt;Invalid with Float Label&lt;/h5&gt;
 &lt;span class="p-float-label"&gt;
-    &lt;input id="float-input-invalid" type="text" pInputText [(ngModel)]="value6" class="ng-invalid ng-dirty"&gt; 
+    &lt;input id="float-input-invalid" type="text" pInputText [(ngModel)]="value6" class="ng-invalid ng-dirty"&gt;
     &lt;label for="float-input-invalid"&gt;Username&lt;/label&gt;
 &lt;/span&gt;
 

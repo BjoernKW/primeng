@@ -9,11 +9,11 @@
 <div class="content-section implementation">
     <div class="card">
         <h5>Basic</h5>
-        <p-cascadeSelect [(ngModel)]="selectedCity1" [options]="countries" optionLabel="cname" optionGroupLabel="name" 
+        <p-cascadeSelect [(ngModel)]="selectedCity1" [options]="countries" optionLabel="cname" optionGroupLabel="name"
             [optionGroupChildren]="['states', 'cities']" [style]="{'minWidth': '14rem'}" placeholder="Select a City"></p-cascadeSelect>
 
         <h5>Templating</h5>
-        <p-cascadeSelect [(ngModel)]="selectedCity2" [options]="countries" optionLabel="cname" optionGroupLabel="name" 
+        <p-cascadeSelect [(ngModel)]="selectedCity2" [options]="countries" optionLabel="cname" optionGroupLabel="name"
             [optionGroupChildren]="['states', 'cities']" [style]="{'minWidth': '14rem'}" placeholder="Select a City">
             <ng-template pTemplate="option" let-option>
                 <div class="country-item">
@@ -32,14 +32,14 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;CascadeSelectModule&#125; from 'primeng/cascadeselect';
+import &#123;CascadeSelectModule&#125; from 'primeng-11/cascadeselect';
 </app-code>
             <h5>Getting Started</h5>
             <p>CascadeSelect requires a value to bind and a collection of arbitrary objects with a nested hierarchy. <i>optionGroupLabel</i>
                 is used for the text of a category and <i>optionGroupChildren</i> is to define the children of the category. Note that order of the <i>optionGroupChildren</i>
                 matters and it should correspond to the data hierarchy.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
-&lt;p-cascadeSelect [(ngModel)]="selectedCity1" [options]="countries" optionLabel="cname" optionGroupLabel="name" 
+&lt;p-cascadeSelect [(ngModel)]="selectedCity1" [options]="countries" optionLabel="cname" optionGroupLabel="name"
     [optionGroupChildren]="['states', 'cities']" [style]="&#123;'minWidth': '14rem'&#125;"&gt;&lt;/p-cascadeSelect&gt;
 </app-code>
 
@@ -69,11 +69,11 @@ ngOnInit() &#123;
                         &#123;cname: 'Townsville', code: 'A-TO'&#125;
                     ]
                 &#125;,
-                
+
             ]
         &#125;,
         &#123;
-            name: 'Canada', 
+            name: 'Canada',
             code: 'CA',
             states: [
                 &#123;
@@ -90,7 +90,7 @@ ngOnInit() &#123;
                         &#123;cname: 'Toronto', code: 'C-TO'&#125;
                     ]
                 &#125;,
-                
+
             ]
         &#125;,
         &#123;
@@ -131,7 +131,7 @@ ngOnInit() &#123;
             <h5>Templating</h5>
             <p>Content of an item can be customized with the <i>option</i> template.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
-&lt;p-cascadeSelect [(ngModel)]="selectedCity2" [options]="countries" optionLabel="cname" optionGroupLabel="name" 
+&lt;p-cascadeSelect [(ngModel)]="selectedCity2" [options]="countries" optionLabel="cname" optionGroupLabel="name"
     [optionGroupChildren]="['states', 'cities']" [style]="&#123;'minWidth': '14rem'&#125;" placeholder="Select a City"&gt;
     &lt;ng-template pTemplate="option" let-option&gt;
         &lt;div class="country-item"&gt;
@@ -333,7 +333,7 @@ ngOnInit() &#123;
                     </tbody>
                 </table>
             </div>
-                
+
             <h5>Dependencies</h5>
             <p>None.</p>
         </p-tabPanel>
@@ -345,14 +345,14 @@ ngOnInit() &#123;
             <a href="https://stackblitz.com/edit/primeng-cascadeselect-demo" class="btn-viewsource" style="margin-left: .5em;" target="_blank">
                 <span>Edit in StackBlitz</span>
             </a>
-            
+
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;h5&gt;Basic&lt;/h5&gt;
-&lt;p-cascadeSelect [(ngModel)]="selectedCity1" [options]="countries" optionLabel="cname" optionGroupLabel="name" 
+&lt;p-cascadeSelect [(ngModel)]="selectedCity1" [options]="countries" optionLabel="cname" optionGroupLabel="name"
     [optionGroupChildren]="['states', 'cities']" [style]="&#123;'minWidth': '14rem'&#125;" placeholder="Select a City"&gt;&lt;/p-cascadeSelect&gt;
-    
+
 &lt;h5&gt;Templating&lt;/h5&gt;
-&lt;p-cascadeSelect [(ngModel)]="selectedCity2" [options]="countries" optionLabel="cname" optionGroupLabel="name" 
+&lt;p-cascadeSelect [(ngModel)]="selectedCity2" [options]="countries" optionLabel="cname" optionGroupLabel="name"
     [optionGroupChildren]="['states', 'cities']" [style]="&#123;'minWidth': '14rem'&#125;" placeholder="Select a City"&gt;
     &lt;ng-template pTemplate="option" let-option&gt;
         &lt;div class="country-item"&gt;
@@ -394,11 +394,11 @@ export class CascadeSelectDemo &#123;
                             &#123;cname: 'Townsville', code: 'A-TO'&#125;
                         ]
                     &#125;,
-                    
+
                 ]
             &#125;,
             &#123;
-                name: 'Canada', 
+                name: 'Canada',
                 code: 'CA',
                 states: [
                     &#123;
@@ -415,7 +415,7 @@ export class CascadeSelectDemo &#123;
                             &#123;cname: 'Toronto', code: 'C-TO'&#125;
                         ]
                     &#125;,
-                    
+
                 ]
             &#125;,
             &#123;

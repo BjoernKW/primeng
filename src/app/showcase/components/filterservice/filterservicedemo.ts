@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarService } from '../../service/carservice';
 import { Car } from '../../domain/car';
-import { SelectItem, FilterService, FilterMatchMode } from 'primeng/api';
+import { SelectItem, FilterService, FilterMatchMode } from 'primeng-11/api';
 
 @Component({
     templateUrl: './filterservicedemo.html'
@@ -23,11 +23,11 @@ export class FilterServiceDemo implements OnInit {
             if (filter === undefined || filter === null || filter.trim() === '') {
                 return true;
             }
-    
+
             if (value === undefined || value === null) {
                 return false;
             }
-            
+
             return value.toString() === filter.toString();
         });
 

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
-import { ConfirmationService } from 'primeng/api';
-import { MessageService } from 'primeng/api';
+import { ConfirmationService } from 'primeng-11/api';
+import { MessageService } from 'primeng-11/api';
 
 @Component({
     templateUrl: './tablecruddemo.html',
@@ -83,13 +83,13 @@ export class TableCrudDemo implements OnInit {
         this.productDialog = false;
         this.submitted = false;
     }
-    
+
     saveProduct() {
         this.submitted = true;
 
         if (this.product.name.trim()) {
             if (this.product.id) {
-                this.products[this.findIndexById(this.product.id)] = this.product;                
+                this.products[this.findIndexById(this.product.id)] = this.product;
                 this.messageService.add({severity:'success', summary: 'Successful', detail: 'Product Updated', life: 3000});
             }
             else {

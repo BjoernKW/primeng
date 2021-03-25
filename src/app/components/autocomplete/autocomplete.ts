@@ -1,12 +1,12 @@
 import {NgModule,Component,ViewChild,ElementRef,AfterViewChecked,AfterContentInit,OnDestroy,Input,Output,EventEmitter,ContentChildren,QueryList,TemplateRef,Renderer2,forwardRef,ChangeDetectorRef,IterableDiffers,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {trigger,style,transition,animate,AnimationEvent} from '@angular/animations';
-import {InputTextModule} from 'primeng/inputtext';
-import {ButtonModule} from 'primeng/button';
-import {RippleModule} from 'primeng/ripple';
-import {SharedModule,PrimeTemplate} from 'primeng/api';
-import {DomHandler, ConnectedOverlayScrollHandler} from 'primeng/dom';
-import {ObjectUtils, UniqueComponentId} from 'primeng/utils';
+import {InputTextModule} from 'primeng-11/inputtext';
+import {ButtonModule} from 'primeng-11/button';
+import {RippleModule} from 'primeng-11/ripple';
+import {SharedModule,PrimeTemplate} from 'primeng-11/api';
+import {DomHandler, ConnectedOverlayScrollHandler} from 'primeng-11/dom';
+import {ObjectUtils, UniqueComponentId} from 'primeng-11/utils';
 import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
 
 export const AUTOCOMPLETE_VALUE_ACCESSOR: any = {
@@ -207,7 +207,7 @@ export class AutoComplete implements AfterViewChecked,AfterContentInit,OnDestroy
     itemTemplate: TemplateRef<any>;
 
     selectedItemTemplate: TemplateRef<any>;
-    
+
     groupTemplate: TemplateRef<any>;
 
     value: any;

@@ -2,14 +2,14 @@ import {NgModule,Component,OnDestroy,Input,Output,EventEmitter,TemplateRef,After
             ContentChildren,QueryList,ViewChild,ElementRef,NgZone,ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DomSanitizer} from '@angular/platform-browser';
-import {ButtonModule} from 'primeng/button';
-import {MessagesModule} from 'primeng/messages';
-import {ProgressBarModule} from 'primeng/progressbar';
-import {DomHandler} from 'primeng/dom';
-import {Message, TranslationKeys} from 'primeng/api';
-import {PrimeTemplate,SharedModule,PrimeNGConfig} from 'primeng/api';
-import {BlockableUI} from 'primeng/api';
-import {RippleModule} from 'primeng/ripple';  
+import {ButtonModule} from 'primeng-11/button';
+import {MessagesModule} from 'primeng-11/messages';
+import {ProgressBarModule} from 'primeng-11/progressbar';
+import {DomHandler} from 'primeng-11/dom';
+import {Message, TranslationKeys} from 'primeng-11/api';
+import {PrimeTemplate,SharedModule,PrimeNGConfig} from 'primeng-11/api';
+import {BlockableUI} from 'primeng-11/api';
+import {RippleModule} from 'primeng-11/ripple';
 import {HttpClient, HttpEvent, HttpEventType, HttpHeaders} from "@angular/common/http";
 
 @Component({
@@ -18,7 +18,7 @@ import {HttpClient, HttpEvent, HttpEventType, HttpHeaders} from "@angular/common
         <div [ngClass]="'p-fileupload p-fileupload-advanced p-component'" [ngStyle]="style" [class]="styleClass" *ngIf="mode === 'advanced'">
             <div class="p-fileupload-buttonbar">
                 <span class="p-button p-component p-fileupload-choose" [ngClass]="{'p-focus': focus, 'p-disabled':disabled || isChooseDisabled()}" (focus)="onFocus()" (blur)="onBlur()" pRipple
-                    (click)="choose()" (keydown.enter)="choose()" tabindex="0"> 
+                    (click)="choose()" (keydown.enter)="choose()" tabindex="0">
                     <input #advancedfileinput type="file" (change)="onFileSelect($event)" [multiple]="multiple" [accept]="accept" [disabled]="disabled || isChooseDisabled()" [attr.title]="''">
                     <span [ngClass]="'p-button-icon p-button-icon-left'" [class]="chooseIcon"></span>
                     <span class="p-button-label">{{chooseButtonLabel}}</span>
@@ -124,7 +124,7 @@ export class FileUpload implements AfterViewInit,AfterContentInit,OnDestroy,Bloc
     @Input() mode: string = 'advanced';
 
     @Input() headers: HttpHeaders;
-    
+
     @Input() customUpload: boolean;
 
     @Input() fileLimit: number;
@@ -350,9 +350,9 @@ export class FileUpload implements AfterViewInit,AfterContentInit,OnDestroy,Bloc
     upload() {
         if (this.customUpload) {
             if (this.fileLimit) {
-                this.uploadedFileCount += this.files.length; 
+                this.uploadedFileCount += this.files.length;
             }
-            
+
             this.uploadHandler.emit({
                 files: this.files
             });
@@ -388,7 +388,7 @@ export class FileUpload implements AfterViewInit,AfterContentInit,OnDestroy,Bloc
 
                             if (event['status'] >= 200 && event['status'] < 300) {
                                 if (this.fileLimit) {
-                                    this.uploadedFileCount += this.files.length; 
+                                    this.uploadedFileCount += this.files.length;
                                 }
 
                                 this.onUpload.emit({originalEvent: event, files: this.files});

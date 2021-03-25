@@ -2,10 +2,10 @@ import {NgModule,Component,ElementRef,OnDestroy,OnInit,Input,Output,EventEmitter
         ViewChild,ChangeDetectorRef,TemplateRef,ContentChildren,QueryList,NgZone,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
 import {trigger,state,style,transition,animate,AnimationEvent} from '@angular/animations';
 import {CommonModule} from '@angular/common';
-import {ButtonModule} from 'primeng/button';
-import {RippleModule} from 'primeng/ripple';
-import {DomHandler, ConnectedOverlayScrollHandler} from 'primeng/dom';
-import {SharedModule,PrimeTemplate,PrimeNGConfig,TranslationKeys} from 'primeng/api';
+import {ButtonModule} from 'primeng-11/button';
+import {RippleModule} from 'primeng-11/ripple';
+import {DomHandler, ConnectedOverlayScrollHandler} from 'primeng-11/dom';
+import {SharedModule,PrimeTemplate,PrimeNGConfig,TranslationKeys} from 'primeng-11/api';
 import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
 import {Subscription} from 'rxjs';
 
@@ -445,7 +445,7 @@ export class Calendar implements OnInit,OnDestroy,ControlValueAccessor {
 
     set defaultDate(defaultDate: Date) {
         this._defaultDate = defaultDate;
-        
+
         if (this.initialized) {
             const date = defaultDate||new Date();
             this.currentMonth = date.getMonth();

@@ -1,8 +1,8 @@
 
 import {NgModule,Component,ChangeDetectionStrategy, Input, ElementRef, ViewChild, OnInit, EventEmitter, Output, forwardRef, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {InputTextModule} from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
+import {InputTextModule} from 'primeng-11/inputtext';
+import { ButtonModule } from 'primeng-11/button';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 export const INPUTNUMBER_VALUE_ACCESSOR: any = {
@@ -266,7 +266,7 @@ export class InputNumber implements OnInit,ControlValueAccessor {
             this.focused = false;
 
         this._disabled = disabled;
-        
+
         if (this.timer)
             this.clearTimer();
     }

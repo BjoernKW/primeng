@@ -4,7 +4,7 @@ import { ContextMenu, ContextMenuSub } from './contextmenu';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { Component } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ContextMenuService } from 'primeng/api';
+import { ContextMenuService } from 'primeng-11/api';
 
 @Component({
     template: `
@@ -19,7 +19,7 @@ class TestContextMenuTest {
             label: 'File',
             icon: 'pi pi-fw pi-file',
             items: [{
-                    label: 'New', 
+                    label: 'New',
                     icon: 'pi pi-fw pi-plus',
                     items: [
                         {label: 'Project'},
@@ -47,11 +47,11 @@ class TestContextMenuTest {
                     label: 'Contents'
                 },
                 {
-                    label: 'Search', 
-                    icon: 'pi pi-fw pi-search', 
+                    label: 'Search',
+                    icon: 'pi pi-fw pi-search',
                     items: [
                         {
-                            label: 'Text', 
+                            label: 'Text',
                             items: [
                                 {
                                     label: 'Workspace'
@@ -93,11 +93,11 @@ class TestContextMenuTest {
 }
 
 describe('ConextMenu', () => {
-  
+
   let contextmenu: ContextMenu;
   let contextmenuP: ContextMenu;
   let fixture: ComponentFixture<TestContextMenuTest>;
-  
+
   beforeEach(() => {
     TestBed.configureTestingModule({
         imports: [
@@ -169,7 +169,7 @@ describe('ConextMenu', () => {
         contextmenuEvent.initEvent('contextmenu', true, true);
         document.dispatchEvent(contextmenuEvent);
         fixture.detectChanges();
-        
+
         const hideSpy = spyOn(contextmenu,"hide").and.callThrough();
         window.dispatchEvent(new Event("resize"));
         fixture.detectChanges();
@@ -183,7 +183,7 @@ describe('ConextMenu', () => {
         const showSpy = spyOn(contextmenu,"show").and.callThrough();
         contextmenu.toggle();
         fixture.detectChanges();
-        
+
         expect(showSpy).toHaveBeenCalled();
         const hideSpy = spyOn(contextmenu,"hide").and.callThrough();
         contextmenu.toggle();
@@ -236,7 +236,7 @@ describe('ConextMenu', () => {
         contextmenuEvent.initEvent('contextmenu', true, true);
         target.nativeElement.dispatchEvent(contextmenuEvent);
         fixture.detectChanges();
-        
+
         const hideSpy = spyOn(contextmenuP,"hide").and.callThrough();
         window.dispatchEvent(new Event("resize"));
         fixture.detectChanges();

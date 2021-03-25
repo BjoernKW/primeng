@@ -2,10 +2,10 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {InplaceDemo} from './inplacedemo';
 import {InplaceDemoRoutingModule} from './inplacedemo-routing.module';
-import {InplaceModule} from 'primeng/inplace';
-import {InputTextModule} from 'primeng/inputtext';
-import {TableModule} from 'primeng/table';
-import {TabViewModule} from 'primeng/tabview';
+import {InplaceModule} from 'primeng-11/inplace';
+import {InputTextModule} from 'primeng-11/inputtext';
+import {TableModule} from 'primeng-11/table';
+import {TabViewModule} from 'primeng-11/tabview';
 import {AppCodeModule} from '../../app.code.component';
 
 @NgModule({

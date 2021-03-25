@@ -9,7 +9,7 @@
     <div class="card">
         <h5>Inline</h5>
         <p-colorPicker [(ngModel)]="color1" [inline]="true"></p-colorPicker>
-        
+
         <h5>Overlay</h5>
         <p-colorPicker [(ngModel)]="color2"></p-colorPicker>
     </div>
@@ -20,7 +20,7 @@
         <p-tabPanel header ="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;ColorPickerModule&#125; from 'primeng/colorpicker';
+import &#123;ColorPickerModule&#125; from 'primeng-11/colorpicker';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -38,7 +38,7 @@ export class MyComponent &#123;
 </app-code>
 
             <h5>Formats</h5>
-            <p>Default color format to use in value binding is "hex" and other possible values are "rgb" and "hsb". 
+            <p>Default color format to use in value binding is "hex" and other possible values are "rgb" and "hsb".
                 Example below has 3 colorpickers having default values with different formats.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-colorPicker [(ngModel)]="color1"&gt;&lt;/p-colorPicker&gt;
@@ -50,11 +50,11 @@ export class MyComponent &#123;
 export class MyComponent &#123;
 
     color1: string;
-    
+
     color2: any = &#123;
         r: 100, g: 130, b: 150
     &#125;;
-    
+
     color3: any = &#123;
         h: 100, s: 50, b: 50
     &#125;;
@@ -74,14 +74,14 @@ export class MyComponent &#123;
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-colorPicker formControlName="color"&gt;&lt;/p-colorPicker&gt;
 </app-code>
-     
+
         <h5>Animation Configuration</h5>
-        <p>Transition of the open and hide animations can be customized using the showTransitionOptions and hideTransitionOptions properties, 
+        <p>Transition of the open and hide animations can be customized using the showTransitionOptions and hideTransitionOptions properties,
             example below disables the animations altogether.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-colorPicker [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'" formControlName="color"&gt;&lt;/p-colorPicker&gt;
-</app-code>       
-    
+</app-code>
+
             <h5>Properties</h5>
             <div class="doc-tablewrapper">
                 <table class="doc-table">
@@ -279,7 +279,7 @@ export class MyComponent &#123;
 export class ColorPickerDemo &#123;
 
     color1: string;
-    
+
     color2: string = '#1976D2';
 &#125;
 </app-code>

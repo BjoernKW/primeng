@@ -1,10 +1,10 @@
 import {NgModule,Component,ElementRef,OnDestroy,Input,Output,EventEmitter,Renderer2,ViewChild,Inject,forwardRef,ChangeDetectorRef,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
 import {trigger,state,style,transition,animate,AnimationEvent} from '@angular/animations';
 import {CommonModule} from '@angular/common';
-import {DomHandler, ConnectedOverlayScrollHandler} from 'primeng/dom';
-import {MenuItem} from 'primeng/api';
+import {DomHandler, ConnectedOverlayScrollHandler} from 'primeng-11/dom';
+import {MenuItem} from 'primeng-11/api';
 import {RouterModule} from '@angular/router';
-import {RippleModule} from 'primeng/ripple';
+import {RippleModule} from 'primeng-11/ripple';
 
 @Component({
     selector: '[pMenuItemContent]',

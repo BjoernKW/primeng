@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
-import {ConfirmationService, MessageService} from 'primeng/api';
+import {ConfirmationService, MessageService} from 'primeng-11/api';
 
 @Component({
     templateUrl: './confirmpopupdemo.html',
     providers: [ConfirmationService, MessageService]
 })
 export class ConfirmPopupDemo {
-    
+
     constructor(private confirmationService: ConfirmationService, private messageService: MessageService) {}
 
     confirm(event: Event) {

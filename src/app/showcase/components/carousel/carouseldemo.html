@@ -91,7 +91,7 @@
         <p-tabPanel header="Documentation">
                     <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;CarouselModule&#125; from 'primeng/carousel';
+import &#123;CarouselModule&#125; from 'primeng-11/carousel';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -125,7 +125,7 @@ import &#123;CarouselModule&#125; from 'primeng/carousel';
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 export class CarouselDemo &#123;
-    constructor(private carService: CarService) &#123; 
+    constructor(private carService: CarService) &#123;
         this.responsiveOptions = [
             &#123;
                 breakpoint: '1024px',
@@ -441,10 +441,10 @@ export class CarouselDemo &#123;
 export class CarouselDemo &#123;
 
     products: Product[];
-	
+
 	responsiveOptions;
 
-	constructor(private productService: ProductService) &#123; 
+	constructor(private productService: ProductService) &#123;
 		this.responsiveOptions = [
             &#123;
                 breakpoint: '1024px',
@@ -469,7 +469,7 @@ export class CarouselDemo &#123;
 			this.products = products;
 		&#125;);
     &#125;
-    
+
 &#125;
 </app-code>
 

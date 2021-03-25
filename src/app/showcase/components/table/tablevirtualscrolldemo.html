@@ -29,7 +29,7 @@
 
     <div class="card">
         <h5>Virtual Scroll with Lazy Loading from a Remote Datasource (10000 Rows)</h5>
-        <p-table [columns]="cols" [value]="virtualCars" [scrollable]="true" [rows]="100" scrollHeight="250px" 
+        <p-table [columns]="cols" [value]="virtualCars" [scrollable]="true" [rows]="100" scrollHeight="250px"
             [virtualScroll]="true" [virtualRowHeight]="34" [lazy]="true" (onLazyLoad)="loadCarsLazy($event)">
             <ng-template pTemplate="header" let-columns>
                 <tr>
@@ -90,7 +90,7 @@
 
 &lt;div class="card"&gt;
     &lt;h5&gt;Virtual Scroll with Lazy Loading from a Remote Datasource (10000 Rows)&lt;/h5&gt;
-    &lt;p-table [columns]="cols" [value]="virtualCars" [scrollable]="true" [rows]="100" scrollHeight="250px" 
+    &lt;p-table [columns]="cols" [value]="virtualCars" [scrollable]="true" [rows]="100" scrollHeight="250px"
         [virtualScroll]="true" [virtualRowHeight]="34" [lazy]="true" (onLazyLoad)="loadCarsLazy($event)"&gt;
         &lt;ng-template pTemplate="header" let-columns&gt;
             &lt;tr&gt;
@@ -121,7 +121,7 @@
 import &#123;Component, OnInit&#125; from '@angular/core';
 import &#123;Car&#125; from '../../components/domain/car';
 import &#123;CarService&#125; from '../../service/carservice';
-import &#123;LazyLoadEvent&#125; from 'primeng/api';
+import &#123;LazyLoadEvent&#125; from 'primeng-11/api';
 
 @Component(&#123;
     templateUrl: './tablevirtualscrolldemo.html',
@@ -158,15 +158,15 @@ export class TableVirtualScrollDemo implements OnInit &#123;
         this.virtualCars = Array.from(&#123;length: 10000&#125;);
     &#125;
 
-    loadCarsLazy(event: LazyLoadEvent) &#123;       
-        //simulate remote connection with a timeout 
+    loadCarsLazy(event: LazyLoadEvent) &#123;
+        //simulate remote connection with a timeout
         setTimeout(() =&gt; &#123;
             //load data of required page
             let loadedCars = this.cars.slice(event.first, (event.first + event.rows));
 
             //populate page of virtual cars
             Array.prototype.splice.apply(this.virtualCars, [...[event.first, event.rows], ...loadedCars]);
-            
+
             //trigger change detection
             this.virtualCars = [...this.virtualCars];
         &#125;, Math.random() * 1000 + 250);

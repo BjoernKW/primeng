@@ -1,8 +1,8 @@
 import {NgModule,Component,ElementRef,Input,Output,EventEmitter,ViewChild,ChangeDetectionStrategy,ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {MenuItem} from 'primeng/api';
-import {ButtonModule} from 'primeng/button';
-import {MenuModule, Menu} from 'primeng/menu';
+import {MenuItem} from 'primeng-11/api';
+import {ButtonModule} from 'primeng-11/button';
+import {MenuModule, Menu} from 'primeng-11/menu';
 
 @Component({
     selector: 'p-splitButton',
@@ -25,27 +25,27 @@ export class SplitButton {
     @Input() icon: string;
 
     @Input() iconPos: string = 'left';
-        
+
     @Input() label: string;
-    
+
     @Output() onClick: EventEmitter<any> = new EventEmitter();
-    
+
     @Output() onDropdownClick: EventEmitter<any> = new EventEmitter();
-    
+
     @Input() style: any;
-    
+
     @Input() styleClass: string;
-    
+
     @Input() menuStyle: any;
-    
+
     @Input() menuStyleClass: string;
-    
+
     @Input() disabled: boolean;
 
     @Input() tabindex: number;
-    
+
     @Input() appendTo: any;
-    
+
     @Input() dir: string;
 
     @Input() showTransitionOptions: string = '.12s cubic-bezier(0, 0, 0.2, 1)';
@@ -53,7 +53,7 @@ export class SplitButton {
     @Input() hideTransitionOptions: string = '.1s linear';
 
     @ViewChild('container') containerViewChild: ElementRef;
-    
+
     @ViewChild('defaultbtn') buttonViewChild: ElementRef;
 
     @ViewChild('menu') menu: Menu;
@@ -61,7 +61,7 @@ export class SplitButton {
     onDefaultButtonClick(event: Event) {
         this.onClick.emit(event);
     }
-          
+
     onDropdownButtonClick(event: Event) {
         this.onDropdownClick.emit(event);
         this.menu.toggle({currentTarget: this.containerViewChild.nativeElement, relativeAlign: this.appendTo == null});

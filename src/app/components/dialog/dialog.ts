@@ -2,11 +2,11 @@ import {NgModule,Component,ElementRef,OnDestroy,Input,Output,EventEmitter,Render
     ContentChildren,QueryList,ViewChild,NgZone, ChangeDetectorRef,ViewRef,ChangeDetectionStrategy, ViewEncapsulation, AfterContentInit, TemplateRef, ContentChild, OnInit} from '@angular/core';
 import {trigger,style,transition,animate, AnimationEvent, animation, useAnimation} from '@angular/animations';
 import {CommonModule} from '@angular/common';
-import {DomHandler} from 'primeng/dom';
-import {Header,Footer,SharedModule, PrimeTemplate} from 'primeng/api';
-import {FocusTrapModule} from 'primeng/focustrap';
-import {RippleModule} from 'primeng/ripple';
-import {UniqueComponentId} from 'primeng/utils';
+import {DomHandler} from 'primeng-11/dom';
+import {Header,Footer,SharedModule, PrimeTemplate} from 'primeng-11/api';
+import {FocusTrapModule} from 'primeng-11/focustrap';
+import {RippleModule} from 'primeng-11/ripple';
+import {UniqueComponentId} from 'primeng-11/utils';
 
 const showAnimation = animation([
     style({ transform: '{{transform}}', opacity: 0 }),
@@ -417,7 +417,7 @@ export class Dialog implements AfterContentInit,OnInit,OnDestroy {
                     }
                 `
             }
-            
+
             this.styleElement.innerHTML = innerHTML;
         }
     }

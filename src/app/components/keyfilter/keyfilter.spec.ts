@@ -4,7 +4,7 @@ import { KeyFilter } from './keyfilter';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { InputText } from 'primeng/inputtext';
+import { InputText } from 'primeng-11/inputtext';
 
 @Component({
     template: `<input type="text" [pValidateOnly]="validateOnly" [(ngModel)]="cc" pKeyFilter="int" pInputText placeholder="Integers">`
@@ -16,7 +16,7 @@ class TestKeyFilterComponent {
 }
 
 describe('KeyFilter', () => {
-  
+
     let keyfilter: KeyFilter;
     let fixture: ComponentFixture<TestKeyFilterComponent>;
     let component: TestKeyFilterComponent;
@@ -177,7 +177,7 @@ describe('KeyFilter', () => {
         expect(preventDefaultSpy).toHaveBeenCalled();
         expect(keydownEvent.returnValue).toBeFalsy();
     });
-    
+
     it('should use input (mocking android)', () => {
         fixture.detectChanges();
 
@@ -187,7 +187,7 @@ describe('KeyFilter', () => {
 
         const inputEl = fixture.debugElement.query(By.css('input')).nativeElement;
 		const inputEvent: any = document.createEvent('CustomEvent');
-        
+
         inputEvent.initEvent('input', true, true);
         inputEl.dispatchEvent(inputEvent);
         fixture.detectChanges();

@@ -11,7 +11,7 @@
     <div class="card">
         <h5>Basic</h5>
         <p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items"></p-splitButton>
-    
+
         <h5>Severities</h5>
         <p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items"></p-splitButton>
         <p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items" styleClass="p-button-secondary"></p-splitButton>
@@ -28,7 +28,7 @@
         <p-tabPanel header="Documentation">
                     <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;SplitButtonModule&#125; from 'primeng/splitbutton';
+import &#123;SplitButtonModule&#125; from 'primeng-11/splitbutton';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -39,7 +39,7 @@ import &#123;SplitButtonModule&#125; from 'primeng/splitbutton';
 </app-code>
 
             <h5>Animation Configuration</h5>
-            <p>Transition of the open and hide animations can be customized using the <i>showTransitionOptions</i> and <i>hideTransitionOptions</i> properties, 
+            <p>Transition of the open and hide animations can be customized using the <i>showTransitionOptions</i> and <i>hideTransitionOptions</i> properties,
                 example below disables the animations altogether.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-splitButton [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'" label="Save" icon="pi pi-check" (onClick)="save()" [model]="items"&gt;&lt;/p-splitButton&gt;

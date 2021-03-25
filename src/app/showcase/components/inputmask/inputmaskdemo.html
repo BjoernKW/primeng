@@ -13,27 +13,27 @@
                 <span>Basic</span>
                 <p-inputMask mask="99-999999" [(ngModel)]="val1" placeholder="99-999999"></p-inputMask>
             </div>
-            
+
             <div class="p-col-12 p-md-6 p-lg-4">
                 <span>SSN</span>
                 <p-inputMask mask="999-99-9999" [(ngModel)]="val2" placeholder="999-99-9999"></p-inputMask>
             </div>
-            
+
             <div class="p-col-12 p-md-6 p-lg-4">
                 <span>Date</span>
                 <p-inputMask mask="99/99/9999" [(ngModel)]="val3" placeholder="99/99/9999" slotChar="mm/dd/yyyy"></p-inputMask>
             </div>
-            
+
             <div class="p-col-12 p-md-6 p-lg-4">
                 <span>Phone</span>
                 <p-inputMask mask="(999) 999-9999" [(ngModel)]="val4" placeholder="(999) 999-9999"></p-inputMask>
             </div>
-            
+
             <div class="p-col-12 p-md-6 p-lg-4">
                 <span>Phone Ext</span>
                 <p-inputMask mask="(999) 999-9999? x99999" [(ngModel)]="val5" placeholder="(999) 999-9999? x99999"></p-inputMask>
             </div>
-            
+
             <div class="p-col-12 p-md-6 p-lg-4">
                 <span>Serial Number</span>
                 <p-inputMask mask="a*-999-a999" [(ngModel)]="val6" placeholder="a*-999-a999"></p-inputMask>
@@ -47,11 +47,11 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;InputMaskModule&#125; from 'primeng/inputmask';
+import &#123;InputMaskModule&#125; from 'primeng-11/inputmask';
 </app-code>
 
             <h5>Getting Started</h5>
-            <p>Component is defined using p-inputMask element with a mask and two-way value binding is enabled with standard ngModel directive.</p>   
+            <p>Component is defined using p-inputMask element with a mask and two-way value binding is enabled with standard ngModel directive.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-inputMask [(ngModel)]="val" mask="99-9999"&gt;&lt;/p-inputMask&gt;
 </app-code>
@@ -70,17 +70,17 @@ import &#123;InputMaskModule&#125; from 'primeng/inputmask';
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-inputMask [(ngModel)]="val" mask="99-aa" characterPattern="[А-Яа-я]"&gt;&lt;/p-inputMask&gt;
 </app-code>
-            
+
             <h5>SlotChar</h5>
             <p>Underscore is the default placeholder for a mask and this can be customized using <i>slotChart</i> option.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 &lt;p-inputMask [(ngModel)]="val" mask="99-9999" slotChar=" "&gt;&lt;/p-inputMask&gt;
 </app-code>
-            
+
             <h5>Optional Values</h5>
             <p>If the input does not complete the mask definition, it is cleared by default. Use <i>autoClear</i> property to control this behavior. In addition,
             certain part of a mask can be made optional by using ? symbol where anything after the question mark becomes optional.</p>
-                        
+
             <h5>Model Driven Forms</h5>
             <p>InputMask can be used in a model driven form as well.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
@@ -234,7 +234,7 @@ import &#123;InputMaskModule&#125; from 'primeng/inputmask';
                     </tbody>
                 </table>
             </div>
-            
+
             <h5>Events</h5>
             <div class="doc-tablewrapper">
                 <table class="doc-table">
@@ -250,12 +250,12 @@ import &#123;InputMaskModule&#125; from 'primeng/inputmask';
                             <td>onFocus</td>
                             <td>event: Browser event</td>
                             <td>Callback to invoke when input receives focus.</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td>onBlur</td>
                             <td>event: Browser event</td>
                             <td>Callback to invoke when input loses focus.</td>
-                        </tr>   
+                        </tr>
                         <tr>
                             <td>onComplete</td>
                             <td>-</td>
@@ -290,7 +290,7 @@ import &#123;InputMaskModule&#125; from 'primeng/inputmask';
                             <td>focus</td>
                             <td>-</td>
                             <td>Applies focus to the input.</td>
-                        </tr> 
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -315,27 +315,27 @@ import &#123;InputMaskModule&#125; from 'primeng/inputmask';
         &lt;span&gt;Basic&lt;/span&gt;
         &lt;p-inputMask mask="99-999999" [(ngModel)]="val1" placeholder="99-999999"&gt;&lt;/p-inputMask&gt;
     &lt;/div&gt;
-    
+
     &lt;div class="p-col-12 p-md-6 p-lg-4"&gt;
         &lt;span&gt;SSN&lt;/span&gt;
         &lt;p-inputMask mask="999-99-9999" [(ngModel)]="val2" placeholder="999-99-9999"&gt;&lt;/p-inputMask&gt;
     &lt;/div&gt;
-    
+
     &lt;div class="p-col-12 p-md-6 p-lg-4"&gt;
         &lt;span&gt;Date&lt;/span&gt;
         &lt;p-inputMask mask="99/99/9999" [(ngModel)]="val3" placeholder="99/99/9999" slotChar="mm/dd/yyyy"&gt;&lt;/p-inputMask&gt;
     &lt;/div&gt;
-    
+
     &lt;div class="p-col-12 p-md-6 p-lg-4"&gt;
         &lt;span&gt;Phone&lt;/span&gt;
         &lt;p-inputMask mask="(999) 999-9999" [(ngModel)]="val4" placeholder="(999) 999-9999"&gt;&lt;/p-inputMask&gt;
     &lt;/div&gt;
-    
+
     &lt;div class="p-col-12 p-md-6 p-lg-4"&gt;
         &lt;span&gt;Phone Ext&lt;/span&gt;
         &lt;p-inputMask mask="(999) 999-9999? x99999" [(ngModel)]="val5" placeholder="(999) 999-9999? x99999"&gt;&lt;/p-inputMask&gt;
     &lt;/div&gt;
-    
+
     &lt;div class="p-col-12 p-md-6 p-lg-4"&gt;
         &lt;span&gt;Serial Number&lt;/span&gt;
         &lt;p-inputMask mask="a*-999-a999" [(ngModel)]="val6" placeholder="a*-999-a999"&gt;&lt;/p-inputMask&gt;
@@ -355,9 +355,9 @@ export class InputMaskDemo &#123;
     val4: string;
 
     val5: string;
-    
+
     val6: string;
-    
+
 &#125;
 </app-code>
         </p-tabPanel>

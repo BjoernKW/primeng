@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
-import { SelectItem } from 'primeng/api';
-import { MessageService } from 'primeng/api';
+import { SelectItem } from 'primeng-11/api';
+import { MessageService } from 'primeng-11/api';
 
 @Component({
     templateUrl: './tableeditdemo.html',
@@ -41,7 +41,7 @@ export class TableEditDemo implements OnInit {
         if (product.price > 0) {
             delete this.clonedProducts[product.id];
             this.messageService.add({severity:'success', summary: 'Success', detail:'Product is updated'});
-        }  
+        }
         else {
             this.messageService.add({severity:'error', summary: 'Error', detail:'Invalid Price'});
         }

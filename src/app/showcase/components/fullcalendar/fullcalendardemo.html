@@ -16,7 +16,7 @@
         <p-tabPanel header="Documentation">
             <h5>Import</h5>
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
-import &#123;FullCalendarModule&#125; from 'primeng/fullcalendar';
+import &#123;FullCalendarModule&#125; from 'primeng-11/fullcalendar';
 </app-code>
 
             <h5>Getting Started</h5>
@@ -24,7 +24,7 @@ import &#123;FullCalendarModule&#125; from 'primeng/fullcalendar';
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
 npm install @fullcalendar/core@4.1.0 --save
 </app-code>
-    
+
             <h5>Plugins</h5>
             <p>FullCalendar is plugin based so install the plugins you require and define them with the options property.</p>
 <app-code lang="markup" ngNonBindable ngPreserveWhitespaces>
@@ -44,13 +44,13 @@ npm install @fullcalendar/interaction --save
 </app-code>
 
             <h5>Event API</h5>
-            <p>Events should be an array and defined using the events property. In this example, we'll be utilizing a service to load our data. See the <a href="https://fullcalendar.io/docs">documentation</a> for 
+            <p>Events should be an array and defined using the events property. In this example, we'll be utilizing a service to load our data. See the <a href="https://fullcalendar.io/docs">documentation</a> for
             more information about the Event API.</p>
 
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 @Injectable()
 export class EventService &#123;
-    
+
     constructor(private http: Http) &#123;&#125;
 
     getEvents() &#123;
@@ -102,12 +102,12 @@ export class FullCalendarDemo implements OnInit &#123;
     events: any[];
 
     options: any;
-            
+
     constructor(private eventService: EventService) &#123; &#125;
 
     ngOnInit() &#123;
         this.eventService.getEvents().then(events => &#123;this.events = events;&#125;);
-        
+
         this.options = &#123;
             plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
             defaultDate: '2017-02-01',
@@ -179,7 +179,7 @@ gotoDate(date: Date) &#123;
     this.fc.getCalendar().gotoDate(date);
 &#125;
 </app-code>
-            
+
             <h5>Properties</h5>
             <div class="doc-tablewrapper">
                 <table class="doc-table">
@@ -204,7 +204,7 @@ gotoDate(date: Date) &#123;
                     </tbody>
                 </table>
             </div>
-                        
+
             <h5>Dependencies</h5>
             <p><a href="https://fullcalendar.io/docs/v4">FullCalendar</a>.</p>
         </p-tabPanel>
@@ -226,12 +226,12 @@ export class FullCalendarDemo implements OnInit &#123;
     events: any[];
 
     options: any;
-            
+
     constructor(private eventService: EventService) &#123; &#125;
 
     ngOnInit() &#123;
         this.eventService.getEvents().then(events => &#123;this.events = events;&#125;);
-        
+
         this.options = &#123;
             plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
             defaultDate: '2017-02-01',
@@ -250,7 +250,7 @@ export class FullCalendarDemo implements OnInit &#123;
 <app-code lang="typescript" ngNonBindable ngPreserveWhitespaces>
 @Injectable()
 export class EventService &#123;
-    
+
     constructor(private http: Http) &#123;&#125;
 
     getEvents() &#123;

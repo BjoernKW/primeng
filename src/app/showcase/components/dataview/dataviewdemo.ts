@@ -1,6 +1,6 @@
 import {Component,OnInit} from '@angular/core';
 import {ProductService} from '../../service/productservice';
-import {SelectItem} from 'primeng/api';
+import {SelectItem} from 'primeng-11/api';
 import {Product} from '../../domain/product';
 
 @Component({
@@ -27,7 +27,7 @@ export class DataViewDemo implements OnInit {
             {label: 'Price Low to High', value: 'price'}
         ];
     }
-    
+
     onSortChange(event) {
         let value = event.value;
 

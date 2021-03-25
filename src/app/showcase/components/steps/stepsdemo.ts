@@ -1,5 +1,5 @@
 import {Component,OnInit,ViewEncapsulation} from '@angular/core';
-import {MenuItem, MessageService} from 'primeng/api';
+import {MenuItem, MessageService} from 'primeng-11/api';
 import { TicketService } from './ticketservice';
 import { Subscription } from 'rxjs';
 
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 export class StepsDemo implements OnInit {
 
     items: MenuItem[];
-    
+
     subscription: Subscription;
 
     constructor(public messageService: MessageService, public ticketService: TicketService) {}

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {MessageService} from 'primeng/api';
+import {MessageService} from 'primeng-11/api';
 
 @Component({
     templateUrl: './accordiondemo.html',
@@ -7,7 +7,7 @@ import {MessageService} from 'primeng/api';
     styleUrls: ['./accordiondemo.scss']
 })
 export class AccordionDemo {
-    
+
     activeState: boolean[] = [true, false, false];
 
     constructor(private messageService: MessageService) {}
@@ -15,7 +15,7 @@ export class AccordionDemo {
     onTabClose(event) {
         this.messageService.add({severity:'info', summary:'Tab Closed', detail: 'Index: ' + event.index})
     }
-    
+
     onTabOpen(event) {
         this.messageService.add({severity:'info', summary:'Tab Expanded', detail: 'Index: ' + event.index});
     }

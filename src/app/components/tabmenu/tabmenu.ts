@@ -1,10 +1,10 @@
 import {NgModule,Component,Input,ContentChildren,QueryList,AfterContentInit,AfterViewInit,AfterViewChecked,TemplateRef,ChangeDetectionStrategy, ViewEncapsulation, ViewChild, ElementRef} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {MenuItem} from 'primeng/api';
-import {RippleModule} from 'primeng/ripple';
-import {PrimeTemplate, SharedModule} from 'primeng/api';
+import {MenuItem} from 'primeng-11/api';
+import {RippleModule} from 'primeng-11/ripple';
+import {PrimeTemplate, SharedModule} from 'primeng-11/api';
 import {RouterModule} from '@angular/router';
-import {DomHandler} from 'primeng/dom';
+import {DomHandler} from 'primeng-11/dom';
 
 @Component({
     selector: 'p-tabMenu',
@@ -70,7 +70,7 @@ export class TabMenu implements AfterContentInit,AfterViewInit,AfterViewChecked 
                 case 'item':
                     this.itemTemplate = item.template;
                 break;
-                
+
                 default:
                     this.itemTemplate = item.template;
                 break;

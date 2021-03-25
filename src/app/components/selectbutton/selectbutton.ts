@@ -1,7 +1,7 @@
 import {NgModule,Component,Input,Output,EventEmitter,forwardRef,ChangeDetectorRef,ContentChild,TemplateRef,ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ObjectUtils} from 'primeng/utils';
-import {RippleModule} from 'primeng/ripple';
+import {ObjectUtils} from 'primeng-11/utils';
+import {RippleModule} from 'primeng-11/ripple';
 import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
 
 export const SELECTBUTTON_VALUE_ACCESSOR: any = {
@@ -15,9 +15,9 @@ export const SELECTBUTTON_VALUE_ACCESSOR: any = {
     template: `
         <div [ngClass]="'p-selectbutton p-buttonset p-component'" [ngStyle]="style" [class]="styleClass"  role="group">
             <div *ngFor="let option of options; let i = index" #btn class="p-button p-component" [class]="option.styleClass" role="button" [attr.aria-pressed]="isSelected(option)"
-                [ngClass]="{'p-highlight':isSelected(option), 
+                [ngClass]="{'p-highlight':isSelected(option),
                         'p-disabled': disabled || isOptionDisabled(option),
-                        'p-button-icon-only': (option.icon && !getOptionLabel(option))}" 
+                        'p-button-icon-only': (option.icon && !getOptionLabel(option))}"
                 (click)="onItemClick($event,option,i)" (keydown.enter)="onItemClick($event,option,i)"
                 [attr.title]="option.title" [attr.aria-label]="option.label" (blur)="onBlur()" [attr.tabindex]="disabled ? null : tabindex" [attr.aria-labelledby]="this.getOptionLabel(option)" pRipple>
                 <ng-container *ngIf="!itemTemplate else customcontent">
@@ -48,9 +48,9 @@ export class SelectButton implements ControlValueAccessor {
     @Input() tabindex: number = 0;
 
     @Input() multiple: boolean;
-    
+
     @Input() style: any;
-        
+
     @Input() styleClass: string;
 
     @Input() ariaLabelledBy: string;
@@ -58,21 +58,21 @@ export class SelectButton implements ControlValueAccessor {
     @Input() disabled: boolean;
 
     @Input() dataKey: string
-    
+
     @Output() onOptionClick: EventEmitter<any> = new EventEmitter();
 
     @Output() onChange: EventEmitter<any> = new EventEmitter();
 
     @ContentChild(TemplateRef) itemTemplate;
-    
+
     value: any;
-        
+
     onModelChange: Function = () => {};
-    
+
     onModelTouched: Function = () => {};
-    
+
     constructor(public cd: ChangeDetectorRef) {}
-    
+
     getOptionLabel(option: any) {
         return this.optionLabel ? ObjectUtils.resolveFieldData(option, this.optionLabel) : (option.label != undefined ? option.label : option);
     }
@@ -84,12 +84,12 @@ export class SelectButton implements ControlValueAccessor {
     isOptionDisabled(option: any) {
         return this.optionDisabled ? ObjectUtils.resolveFieldData(option, this.optionDisabled) : (option.disabled !== undefined ? option.disabled : false);
     }
-    
+
     writeValue(value: any) : void {
         this.value = value;
         this.cd.markForCheck();
     }
-    
+
     registerOnChange(fn: Function): void {
         this.onModelChange = fn;
     }
@@ -97,17 +97,17 @@ export class SelectButton implements ControlValueAccessor {
     registerOnTouched(fn: Function): void {
         this.onModelTouched = fn;
     }
-    
+
     setDisabledState(val: boolean): void {
         this.disabled = val;
         this.cd.markForCheck();
     }
-    
+
     onItemClick(event, option: any, index: number) {
         if (this.disabled || this.isOptionDisabled(option)) {
             return;
         }
-                
+
         if (this.multiple) {
             if (this.isSelected(option))
                 this.removeOption(option);
@@ -117,21 +117,21 @@ export class SelectButton implements ControlValueAccessor {
         else {
             this.value = this.getOptionValue(option);
         }
-        
+
         this.onOptionClick.emit({
             originalEvent: event,
             option: option,
             index: index
         });
-        
+
         this.onModelChange(this.value);
-        
+
         this.onChange.emit({
             originalEvent: event,
             value: this.value
         });
     }
-    
+
     onBlur() {
         this.onModelTouched();
     }
@@ -139,7 +139,7 @@ export class SelectButton implements ControlValueAccessor {
     removeOption(option: any): void {
         this.value = this.value.filter(val => !ObjectUtils.equals(val, this.getOptionValue(option), this.dataKey));
     }
-    
+
     isSelected(option: any) {
         let selected = false;
         let optionValue = this.getOptionValue(option);
